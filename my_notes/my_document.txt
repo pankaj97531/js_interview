@@ -1,0 +1,69 @@
+https://developers.google.com/web/tools/chrome-devtools/inspect-styles
+
+what is async and defer in script tag
+
+https://redux.js.org/advanced/example-reddit-api
+
+https://redux.js.org/advanced/advanced-tutorial
+
+https://stackoverflow.com/questions/38332912/how-do-i-access-store-state-in-react-redux
+
+https://medium.com/@rossbulat/how-to-use-react-refs-4541a7501663
+
+what is provider in react-redux
+
+ref in react
+
+How to apply on scroll page load in react
+
+How to do multiscroll functionality in react
+
+https://itnext.io/dispatching-actions-from-child-components-bd292a51f176
+
+https://blog.bam.tech/developer-news/4-ways-to-dispatch-actions-with-redux
+
+https://stackoverflow.com/questions/34458261/how-to-get-simple-dispatch-from-this-props-using-connect-w-redux
+
+https://blog.benestudio.co/5-ways-to-connect-redux-actions-3f56af4009c8
+
+isomorphic react{
+
+https://medium.com/capital-one-tech/why-everyone-is-talking-about-isomorphic-universal-javascript-and-why-it-matters-38c07c87905
+
+https://medium.com/@gethylgeorge/isomorphic-react-redux-to-do-list-example-ece62f6f960f
+
+https://stackoverflow.com/questions/43064707/what-does-an-isomorphic-react-mean
+
+}
+
+redux thunk {
+
+https://stackoverflow.com/questions/34570758/why-do-we-need-middleware-for-async-flow-in-redux/34599594#34599594
+
+https://daveceddia.com/what-is-a-thunk/
+
+https://medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60
+
+https://www.youtube.com/watch?v=xihoZZU0gao#action=share
+
+https://redux.js.org/faq/actions#what-async-middleware-should-i-use-how-do-you-decide-between-thunks-sagas-observables-or-something-else
+
+}
+
+php{
+
+https://linoxide.com/ubuntu-how-to/install-xampp-stack-ubuntu-16-04-terminal/
+
+https://askubuntu.com/questions/500573/how-to-run-php-program-that-saved-in-opt-lampp-htdocs
+
+}
+
+How to hack ajax request
+
+DDos attack prevention 
+
+How to capture browser action by javascript
+
+working on PropTypes
+
+pre and post in mongoose

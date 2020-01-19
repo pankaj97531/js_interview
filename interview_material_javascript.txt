@@ -1,0 +1,120 @@
+1.ajax with different state
+
+2.What is cross site ajax
+
+3.What is cross site scripting..........
+
+4.How to do pass by reference in javascript.............
+
+5.different between <script defer> , <script asyn> and <script> load time
+
+function func1(name,address){
+this.name=name;
+this.address=address;
+function getdetails(){
+console.log(this.name+" " +this.address);
+}
+getdetails();
+}
+console.log(func1("test","test1"));
+console.log(new func1("test","test1"));
+
+var x=func1("test","test1");
+console.log(x);
+var x=new func1("test","test1");
+console.log(x); 
+
+6. ARIA in web development
+
+Accessible Rich Internet Applications (ARIA) is a set of attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
+
+What is cors :
+
+Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell a browser to let a web application running at one origin (domain) have permission to access selected resources from a server at a different origin. A web application executes a cross-origin HTTP request when it requests a resource that has a different origin (domain, protocol, and port) than its own origin.
+
+details are in : https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+
+What is Etag : 
+
+answer link : 
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag
+
+What is HTTP2 :
+
+HTTP/2 will make our applications faster, simpler, and more robust — a rare combination — by allowing us to undo many of the HTTP/1.1 
+
+https://developers.google.com/web/fundamentals/performance/http2/
+
+Time to first byte :
+
+Time to first byte (TTFB) is a measurement used as an indication of the responsiveness of a webserver or other network resource.
+
+What is event delegation.
+
+What is pure function.
+
+A pure function doesn't depend on and doesn't modify the states of variables out of its scope. Concretely, that means a pure function always returns the same result given same parameters. Its execution doesn't depend on the state of the system. Pure functions are a pillar of functional programming.
+
+What is function composition.
+
+answer : Function composition is the process of combining two or more functions to produce a new function. Composing functions together is like snapping together a series of pipes for our data to flow through.
+
+What happen if we don't delclare <!DOCTYPE> in html
+
+The <!DOCTYPE> declaration is not an HTML tag; it is an instruction to the web browser about what version of HTML the page is written in.
+
+What is block level element and inline element in block level
+
+Block Level Elements: A block-level element always starts on a new line and stretches out to the left and right as far as it can.
+
+Inline Elements: An inline element is the opposite of the block-level element. It does not start on a new line and takes up only necessary width.
+
+span element:
+
+indic languages in web page
+
+What is web worker
+
+Animation using css.
+
+pseudo selectors in css
+
+A Pseudo class in CSS is used to define the special state of an element. It can be combined with a CSS selector to add an effect to existing elements based on their states. For Example, changing the style of an element when the user hovers over it, or when a link is visited. All of these can be done using Pseudo Classes in CSS.
+
+Note that pseudo-class names are not case-sensitive.
+
+:hover Pseudo-class: T
+
+:active Pseudo-class
+
+:focus Pseudo-class
+
+:visited Pseudo-class:
+
+A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element(s). For example, ::first-line can be used to change the font of the first line of a paragraph.
+
+p::first-line {
+  color: blue;
+  text-transform: uppercase;
+}
+
+difference between display none and visibility : hidden
+
+display:none means that the tag in question will not appear on the page at all (although you can still interact with it through the dom). There will be no space allocated for it between the other tags.
+
+visibility:hidden means that unlike display:none, the tag is not visible, but space is allocated for it on the page. The tag is rendered, it just isn't seen on the page.
+
+css specification :
+
+
+css to sticky rectangular box of 100px by 100px pixel to botton left of the page.
+
+css flex box -how different from box model.
+
+what is first paint in html
+
+https://scotch.io/courses/10-web-performance-audit-tips-for-your-next-billion-users-in-2018/fmp-first-meaningful-paint
+
+https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint
+

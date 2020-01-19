@@ -1,0 +1,61 @@
+https://stackoverflow.com/questions/41881123/mysqli-real-connect-hy000-2002-no-such-file-or-directory
+
+https://medium.com/airbnb-engineering/isomorphic-javascript-the-future-of-web-apps-10882b7a2ebc#.4nyzv6jea
+
+https://medium.com/capital-one-tech/why-everyone-is-talking-about-isomorphic-universal-javascript-and-why-it-matters-38c07c87905
+
+
+https://www.cyberciti.biz/faq/star-stop-restart-apache2-webserver/
+
+https://askubuntu.com/questions/500573/how-to-run-php-program-that-saved-in-opt-lampp-htdocs
+
+How to hack ajax request
+
+DDos attack prevention 
+
+How to capture browser action by javascript
+
+mongodb document {
+
+EA312927
+gpg: requesting key EA312927 from hkp server keyserver.ubuntu.com
+gpg: key EA312927: public key "Totally Legit Signing Key <mallory@example.org>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+
+
+}
+
+MongoDB {
+
+sudo service mongod start
+
+}
+
+https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04
+
+SELECT User, Host, plugin FROM mysql.user;
+
+UPDATE user SET plugin='auth_socket' WHERE User='phpmyadmin';
+
+SELECT User, Host, plugin FROM mysql.user;
+
+CREATE USER 'phpmyadmin'@'localhost' IDENTIFIED BY 'phpmyadmin';
+
+GRANT ALL PRIVILEGES ON *.* TO 'phpmyadmin'@'localhost';
+
+UPDATE mysql.user SET plugin='mysql_native_password' WHERE User='phpmyadmin';
+
+FLUSH PRIVILEGES;
+
+ALTER USER 'phpmyadmin'@'localhost' IDENTIFIED BY 'Airtel@123';
+
+mysql -u phpmyadmin -h localhost -p
+
+sudo mysql -u root -p
+
+UPDATE mysql.user SET authentication_string = PASSWORD('Airtel@123')
+
+WHERE User = 'phpmyadmin' AND Host = 'localhost';
+
+SET PASSWORD FOR 'phpmyadmin'@'localhost' = PASSWORD('Airtel@123');

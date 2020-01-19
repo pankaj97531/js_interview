@@ -1,0 +1,149 @@
+Q : What is memo in react
+
+	React.memo is a higher order component. It’s similar to React.PureComponent but for function components instead of classes.
+
+	If your function component renders the same result given the same props, you can wrap it in a call to React.memo for a performance boost in some cases by memoizing the result.
+	
+	const MyComponent = React.memo(function MyComponent(props) {
+	  /* render using props */
+	});
+	
+	function MyComponent(props) {
+	  /* render using props */
+	}
+	function areEqual(prevProps, nextProps) {
+	  /*
+	  return true if passing nextProps to render would return
+	  the same result as passing prevProps to render,
+	  otherwise return false
+	  */
+	}
+	export default React.memo(MyComponent, areEqual);
+	
+	areEqual(prevProps, nextProps) function must return true if prevProps and nextProps are equal.
+
+Q : What is suspension in react
+
+	Suspense lets your components “wait” for something before they can render.
+	Suspense is not a data fetching library. It’s a mechanism for data fetching libraries to communicate to React that the data a component is reading is not ready yet. React can then wait for it to be ready and update the UI. At Facebook, we use Relay and its new Suspense integration. 
+
+Q : What is limitation of react
+
+	One way data binding , Two way data binding is not supported. View-orientedness is one of the cons of ReactJS. React Js is not SEO-friendly. React is library not framework. For many work we have to dependent on third party library.
+
+	It is a UI library only. As such when building something with React you will have to include other libraries to handle other parts of an application, such as application state.
+
+	When comparing it to a monolithic framework such as AngularJS, you will find that there is no predefined way to structure your app (such as services, controllers & views in Angular). This means that it is the responsibility of the developer to find his/her own ways to effectively manage several parts of the application without a predefined structure. This can lead to significant overhead and long development times when the devised structure is bad or ineffective.
+
+	To avoid these pitfalls, it is not enough to just learn React and start coding. If you want to avoid trouble in the long run you have to research popular & effective ways to structure your app from third parties, such as blogs or example apps from github. Those however are rarely detailed enough to represent a complex application and as such can’t give you a good guideline on what to do and not to do. You will have to make your own experiences here and learn from them.
+
+	All the stuff going on in the background. React is mainly written using JSX & ES6, transpiled using Babel and build & packaged using Webpack & npm. Those tools are requirements to be effective when using React, however their inner workings & processes are not easy to learn and require significant time to understand. On the other hand if you skip learning those things, your build might fail with error messages that have no meaning to you and you will be stuck with code that doesn’t work and you have no power to correct by yourself.
+
+	React is still very young. The ecosystem behind it (open-source libraries, components) is still small compared to older frameworks such as Angular. You will not always find what you are looking for in open-source contributions.
+
+	Touching on the last point, while React’s APIs are mostly stable, there are still some things that can change in future versions (such as the childContext API). There is no guarantee that the code you write today will work with future versions of React.
+
+	Last but not least, it features a radically different approach to UI design by introducing reusable components. The process of learing how to think in React can be difficult for you if you have extensive experience using other methods, such as MVC. You basically have to avoid falling back into old thought patterns because they most likely don’t work effectively with React.
+
+Q : What is server side rendering
+
+Q : What is three view in virtual dom
+
+	virtual dom is Virtual represntation of UI is kept in memory and synced with the react DOM by a library such as React DOM.This  process is called reconcilation.
+	
+Q : What is React DOM.
+
+	React DOM package provide DOM specific Method that can be used at top level of your app.
+	React DOM specific method  : 
+	render,
+	hydrate,
+	unmountcomponentAtNode,
+	findDOMNode,
+	CreatePortal	
+
+Q : What is difference between react 15 and 16
+
+	Error Boundary : 
+
+	Fragments : 
+
+	Portals : Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component. render() {
+	return ReactDOM.createPortal(
+    this.props.children,
+    domNode,
+	);
+	}
+
+	Reduced File Size :
+
+	Move to prop-types package from React.PropTypes.
+	
+	Better server-side rendering.
+	
+	React 16 includes a completely rewritten server renderer. It’s really fast. It supports streaming, so you can start sending bytes to the client faster.
+	
+	React.createClass is now available as create-react-class,
+	
+	React.DOM as react-dom-factories
+	
+Q : What is Error Boundary
+
+	Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed. Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.
+	
+	A class component becomes an error boundary if it defines either (or both) of the lifecycle methods static getDerivedStateFromError() or componentDidCatch(). Use static getDerivedStateFromError() to render a fallback UI after an error has been thrown. Use componentDidCatch() to log error information.	
+
+Q : What is webpack
+
+	Webpack is a module bundler.
+	Webpack can take care of bundling alongside a separate task runner.
+	
+	The smallest project you can bundle with webpack consists of input and output. 
+	
+	The bundling process begins from user-defined entries. Entries themselves are modules and can point to other modules through imports.
+	
+	When you bundle a project using webpack, it traverses the imports, constructing a dependency graph of the project and then generates output based on the configuration. Additionally, it's possible to define split points to create separate bundles within the project code itself.
+
+Q : What is JSX
+
+	it is a syntax extension to JavaScript. 
+	JSX may remind you of a template language, but it comes with the full power of JavaScript.
+
+Q : Call apply and bind
+
+Q : What is delete method in javascript
+
+Q : Object method in javascript
+
+Q : Event loop
+
+Q : why we are using react over any other framework
+
+Q : how to set default prop in react
+
+Q : performance in react
+
+Q : Reconcilation in react
+
+	Reconciliation is the process through which React updates the DOM. When a component's state changes, React has to calculate if it is necessary to update the DOM. It does this by creating a virtual DOM and comparing it with the current DOM. In this context, the virtual DOM will contain the new state of the component.
+	
+	{
+	https://css-tricks.com/how-react-reconciliation-works/
+	}
+
+
+Q : semantic html in react
+
+Q : Difference between react dom and dom 
+
+A : {
+	https://reactkungfu.com/2015/10/the-difference-between-virtual-dom-and-dom/
+	https://stackoverflow.com/questions/34114350/react-vs-reactdom
+	}
+
+Q : controlled input and uncontrolled input in react
+
+Q : Memory management in javascript
+
+Q : what is stack queue and heap in javascript
+
+Q : https://www.toptal.com/nodejs/top-10-common-nodejs-developer-mistakes
