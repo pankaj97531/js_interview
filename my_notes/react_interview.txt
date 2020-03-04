@@ -147,3 +147,5 @@ Q : Memory management in javascript
 Q : what is stack queue and heap in javascript
 
 Q : https://www.toptal.com/nodejs/top-10-common-nodejs-developer-mistakes
+
+Q : What is controlled component and uncontrolled component.
