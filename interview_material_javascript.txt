@@ -6,7 +6,7 @@
 
 4.How to do pass by reference in javascript.............
 
-5.different between <script defer> , <script asyn> and <script> load time
+5.different between <script defer> , <script async> and <script> load time
 
 function func1(name,address){
 this.name=name;
@@ -112,9 +112,10 @@ css to sticky rectangular box of 100px by 100px pixel to botton left of the page
 
 css flex box -how different from box model.
 
-what is first paint in html
+what is first paint in html( what happens after entering URL in web brwoser)
 
 https://scotch.io/courses/10-web-performance-audit-tips-for-your-next-billion-users-in-2018/fmp-first-meaningful-paint
 
 https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint
 
+What is scope chaining
