@@ -22,6 +22,14 @@ Stores data with no expiration date, and gets cleared only through JavaScript, o
 
 Storage limit is the maximum amongst the three
 
+localStorage.setItem('myCat', 'Tom');
+
+var cat = localStorage.getItem('myCat');
+
+localStorage.removeItem('myCat');
+
+localStorage.clear();
+
 SessionStorage
 
 The sessionStorage object stores data only for a session, meaning that the data is stored until the browser (or tab) is closed.
@@ -29,6 +37,14 @@ The sessionStorage object stores data only for a session, meaning that the data 
 Data is never transferred to the server.
 
 Storage limit is larger than a cookie (at least 5MB).
+
+sessionStorage.setItem('key', 'value');
+
+let data = sessionStorage.getItem('key');
+
+sessionStorage.removeItem('key');
+
+sessionStorage.clear();
 
 Cookie
 
@@ -39,6 +55,13 @@ Cookies are primarily for server-side reading (can also be read on client-side),
 Size must be less than 4KB.
 
 Cookies can be made secure by setting the httpOnly flag as true for that cookie. This prevents client-side access to that cookie
+
+In order to delete a cookie set the expires date to something in the past.
+
+document.cookie = "name=oeschger";
+document.cookie = "favorite_food=tripe";
+
+document.cookie = "user=John; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"
 
 memory leak in javascript example{
 https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/
