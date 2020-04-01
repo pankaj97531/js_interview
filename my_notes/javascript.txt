@@ -2,11 +2,48 @@ what is async and defer in script tag
 
 falsy values in javascript
 
+console.log("The 7 falsy values")
+0 ? console.log("truthy") : console.log("falsy") // falsy
+0n ? console.log("truthy") : console.log("falsy") // falsy
+null ? console.log("truthy") : console.log("falsy") // falsy
+undefined ? console.log("truthy") : console.log("falsy") // falsy
+false ? console.log("truthy") : console.log("falsy") // falsy
+NaN ? console.log("truthy") : console.log("falsy") // falsy
+"" ? console.log("truthy") : console.log("falsy") // falsy
+
+
 form validation without jquery
 
 combination of setTimeout and setInterval
 
 different types of error in javascript
+
+Syntax Errors : Syntax errors are also known as parsing errors.  In JavaScript, they occur at the interpretation time.
+Consider this code segment:
+ <script type=''text/javascript''>
+    window.show(;
+  </script>
+  
+Runtime Errors : These type of error occurs during the runtime of the program, after it is interpreted by the compiler.
+
+Consider this code segment:
+
+ <script type=''text/javascript''>
+    window.show();
+  </script>
+
+TypeError — my number two as far as occurrence in development is concerned. Thrown when we have some value and it is not of a proper type.
+
+example : const someBoolen = true;
+someBoolen.slice(-1); //Error : uncaught typeError : someBoolen slice is not a function.
+
+ReferenceError — thrown when we want to refer to some variable that doesn’t exist.  
+
+example : const name= recievedName; //error : uncaught ReferenceError .recievedName is not defined.
+
+RangeError  : thrown when a value is not in an allowed range.
+
+example : Number('5').toFixed(102); //error : uncaught RangeError.toFixed digit argument must be 0 to 100.
 
 timestamp in javascript 
 
