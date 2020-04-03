@@ -1,0 +1,74 @@
+Q : What is semantic HTML?
+
+A : Semantic HTML is a coding style. It is the use of HTML markup to reinforce the semantics or meaning of the content. For example: In  
+	semantic HTML <b> </b> tag is not used for bold statement as well as <i> </i> tag is used for italic. Instead of these we use
+	<strong></strong> and <em></em> tags.
+
+Q : What is an image map?
+
+A : Image map facilitates you to link many different web pages using a single image.
+	It is represented by <map> tag. You can define shapes in images that you want to make part of an image mapping.	
+	
+Q :  How to insert a copyright symbol on a browser page?
+
+A : You can insert a copyright symbol by using &copy; or &#169; in an HTML file.
+
+Q : Is it possible to change the color of the bullet?	
+	
+A : The color of the bullet is always the color of the first text of the list. 
+	So, if you want to change the color of the bullet, you must change the color of the text.
+	
+Q : Does a <!DOCTYPE html> tag is a HTML tag?
+
+A : No, the <!DOCTYPE html> declaration is not an HTML tag. There are many type of HTML e.g. HTML 4.01 Strict, HTML 4.01 Transitional, 
+	HTML 4.01 Frameset, XHTML 1.0 Strict, XHTML 1.0 Transitional, XHTML 1.0 Frameset, XHTML 1.1 etc. So, <!DOCTYPE html> is used to instruct the web browser about the HTML page.	
+
+Q : What is SVG?
+
+A : SVG images and their behaviors are defined in XML text files. So as XML files, you can create and edit an SVG image with the text 
+	editor. It is mostly used for vector type diagrams like pie charts, 2-Dimensional graphs in an X, Y coordinate system.	
+	
+Q : What are the different new form element types in HTML 5?
+
+A : Following is a list of 10 frequently used new elements in HTML 5:
+	Color
+	Date
+	Datetime-local
+	Email
+	Time
+	Url
+	Range
+	Telephone
+	Number
+	Search	
+	
+Q : What is datalist tag?
+
+A : The HTML 5 datalist tag provides an autocomplete feature on the form element. It facilitates users to choose the predefined options 
+	to the users to select data.
+	<label>    
+	 Enter your favorite cricket player: Press any character<br />    
+	 <input type="text" id="favCktPlayer" list="CktPlayers">    
+	 <datalist id="CktPlayers">    
+	 <option value="Sachin Tendulkar">    
+	 <option value="Brian Lara">    
+	 <option value="Jacques Kallis">     
+	 <option value="Ricky Ponting">     
+	 <option value="Rahul Dravid">     
+	 <option value="Shane Warne">     
+	 <option value="Rohit Sharma">     
+	 <option value="Donald Bradman">     
+	 <option value="Saurav Ganguly ">     
+	 <option value="AB diVilliers">     
+	 <option value="Mahendra Singh Dhoni">     
+	 <option value="Adam Gilchrist">    
+	 </datalist>    
+	</label>	
+
+Q : How are tags migrated from HTML4 to HTML5?
+
+A : <div id="header">	<header>
+	<div id="menu">		<nav>
+	<div id="content">	<section>
+	<div id="post">		<article>
+	<div id="footer">	<footer>	

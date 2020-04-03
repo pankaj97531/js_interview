@@ -1,0 +1,41 @@
+Q : What do you understand by Bootstrap container?
+
+A : Bootstrap container behaves like a container where you can put HTML code and it is a part within the page where the content of 
+	the site can be placed to make it responsive and fast.
+	
+Q : How many types of layouts are there in Bootstrap?
+
+A : There are two types of layouts in Bootstrap.
+	They are:
+	Fluid Layout
+	Fixed Layout	
+	
+Q : Define Fluid Layout.
+
+A : Fluid Layout is useful when you need to make an app that involves the full width of the screen i.e. Fluid Layout adjusts 
+	itself according to the browser size.	
+	
+Q : Define Fixed Layout.
+
+A : A fixed layout is responsive and easy to use but just like the fluid layout, it cannot adjust itself according to the browser size.
+	The fixed layout should be 940 px in most cases.
+	
+Q : Explain Modal plugin in Bootstrap.
+
+A : A model is an inherited window that is layered over its parent window. This is used to augment the user experience and adds 
+	different functionalities to the users. Model windows are created with the help of the modal plugin.
+
+Q : What is the grid system in Bootstrap?
+
+A : By using the grid system, we can make up to 12 columns across a page. There are different classes that have been defined for this 
+	for the UI purpose.
+	
+Q : Close Gap between two divs using bootstrap 4
+
+A : To remove the padding between the columns, you can use the .no-gutters class on your .row div
+	You should also consider using padding-left instead of margin-left on your first column if you want to keep the items in the grid system.
+	.row .form-group:first-child {
+	  padding-left: 15px;
+	}
+
+	

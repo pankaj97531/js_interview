@@ -1,0 +1,284 @@
+Q : General Differences between HTML5 and HTML4
+
+A : Following are some of the major characteristics that distinguish HTML5 from HTML4.
+	1. Simplified and Clear Syntax
+
+	The syntax in HTML5 is extremely clear and simple as compared to HTML4. One example of this is the DOCTYPE element. In HTML4 the DOCTYPE declaration was too messy and lengthy and used to refer an external source. However in HTML5 DOCTYPE element has been made extremely simple. For instance a mere <!DOCTYPE html> is enough to specify the document type.
+
+	2. Multimedia Elements
+
+	HTML5 contains built in support for integrated multimedia files into web page via video and audio tags. Previously, in HTML4, the multimedia content was integrated in web pages via third party plugins such as Silverlight and flash.
+
+	3. Accessing User Geographical location
+
+	Previously in HTML4, it was an extremely cumbersome task to get the geographical locations of the visitors visiting the site. It was even difficult when the website was accessed through mobile devices. On the other hand, in HTML5 is extremely easy to get the user location. HTML5’s JS GeoLocation can be leveraged to identify the location of the user accessing the website.
+
+	4. Client Side storage
+
+	In HTML4, in order to store important data on client side, browser’s cache was used. However, that cache is limited and doesn’t support relational storage mechanism. In HTML5, this issue has been addressed via Web SQL database and application cache that can be access via HTML5’s JavaScript interface.
+
+	5. Client Server Communication
+
+	In HTML4 the communication between the client and server was done through streaming and long polling, since there are no web sockets available in HTML4. On the contrary, HTML5 contains web sockets that allow full duplex communication between clients and servers.
+
+	6. JavaScript Threading Mechanism
+
+	In HTML4, JavaScript and the browser interface with which user interacts, run in the same thread which affects performance. HTML5 contains JS Web Worker API which allows JavaScript and Browser interface to run in separate threads.
+
+	7. Browser Compatibility
+
+	As aforementioned, HTML4 is an established standard for developing browser applications and has been in use for more than 10 years. For this reason, HTML4 is compatible with almost all web-browsers. On the other hand, HTML5 is still in the process of evolution and the currently available tags are being modified and also new tags are being added. Therefore, HTML5 lags behind HTML4 in terms of compatibility with the browsers.
+
+	Tag Differences in HTML4 and HTML5
+
+	Several tags in HTML4 have been removed from HTML5 or their functionality has been modified. Following are some of the tags that are removed from HTML5 or have different functionality in HTML5 as compared to HTML4.
+
+	1. <Applet> removed <Object> Added in HTML5
+
+	HTML4 contained an <applet> tag that was used for displaying applets in a web browser. However, in HTML5, this applet tag has been removed. In order to display applet type items, a new <object> tag has been introduced in HTML5.
+
+	2. <Acronym> removed <Abbr> Added in HTML5
+
+	HTML4 contained an <acronym> tag that was used for displaying abbreviation’s in a web browser. However, in HTML5, this tag has been removed. A new <abbr> tag has been introduced in HTML5.
+
+	3. Difference in usage of <hr> tag
+
+	The <hr> tag was used to draw a line in HTML4 and all the previous versions of HTML, however in HTML5, the functionality of this tag has been changed and it is used for defining a thematic break in the web page.
+
+	4. Difference in usage of <a> tag
+
+	In HTML4 and previous versions, the <a> tag was used as anchor as well as for referring to a link. In the HTML5, the <a> tag is used only as a hyperlink. But if the href tag is removed from the <a> tag, the <a> tag can be used as a place holder for other hyperlinks.
+
+	5. Schema attribute removed from <meta> tag in HTML5
+
+	The <meta> tag is defined in the header section of the HTML document and contains information about the data. In the previous versions of HTML, including the HTML4, this tag used to contain an attribute called schema that defined the schema of the document. However, in HTML5, this tag has been removed.
+
+	Changes in attributes
+
+	Following are some of the attributes that have been modified in HTML5.
+
+	In HTML4 and previous HTML versions, script attribute was used to in link tag to refer to JavaScript or other similar scripts. In HTML5 It is not necessary to use that script attribute.
+	In HTML5, the <table> tag can only have one attribute Border and the value of this attribute can only be zero or one. Previously, the <table> tag had many attributes.
+	In the previous versions of HTML, the <meta> tag didn’t had the charset attribute that defines the standard character encoding for the webpage. This attribute has been added in HTML5.
+
+	HTML5 New Tags:
+
+	1. <canvas> Tag:
+
+	A canvas is a rectangular area on an HTML page. The <canvas> tag is used to draw graphics using JavaScript. It is only a container for graphics. Inside this container, graphics are drawn using JavaScript. Canvas has different methods for paths, circles, boxes, characters and adding images. By default it has no border and no content.
+	The markup looks like this:
+
+	<canvas id="canvas1" width =”400” height= “300”>Update your browser</canvas>
+
+	The id attribute is used to refer the canvas in the script and width and height are used to define the size of the canvas.
+
+	You can have multiple canvases on one html page. The first example of this tutorial demonstrates the usage of canvas element.
+
+	Example1:
+	HTML:
+	<!DOCTYPE html>
+	<html>
+	<header>
+	</header>
+	<body>
+	<h3>Go4Expert Canvas</h3>
+	<canvas id="mycanvas" width="400" height="300">Update your browser</canvas>
+	<script>
+	var tempcan=document.getElementById('mycanvas');
+	var tempcan2=tempcan.getContext("2d");
+	tempcan2.fillStyle='#0000ff';
+	tempcan2.fillRect(25,25,180,100);
+	</script>
+	</body>
+	</html>
+	Sample 1
+
+	Example1.html
+
+	Browser Support for canvas tag
+
+	Browser - Version
+	Chrome - 4.0
+	Firefox - 2.0
+	Safari - 3.1
+	Internet Explorer - 9.0
+	Opera - 9.0
+
+	2. New Media Elements in HTML5:
+
+	HTML 5 has included several new media elements for displaying media content. Following are some of the most important media elements included in HTML5.
+	<audio>
+	<embed>
+	<source>
+	<track>
+	<video>
+
+	2a. <video> Tag:
+
+	HTML5 defines a new element which specifies a standard way to embed a video file on a web page. The file formats supported for the <video> element are:
+	Mp4
+	WebM
+	Ogg
+	The second example of this tutorial demonstrates the usage of the new video element that is used to embed video files in a webpage. Have a look at the following example.
+
+	Example2:
+	HTML:
+	<!DOCTYPE html>
+	<html>
+	<head><title>Go4Expert Video Example</title></head>
+	<body>
+	<h3>
+	Go4Expert Video Example
+	</h3>
+	<video width="320" height="240" controls="controls">
+	  <source src="http://imgs.g4estatic.com/html/html4-vs-html5/sample.mp4" type="video/mp4">
+	  Your browser does not support the video tag.
+	</video>
+	</body>
+	</html>
+	In the above code, the attribute “src” of the source tag refers to the location of the Video. If video is not found, the line below the source elements is displayed on the screen. The control attribute adds video controls, like play, pause, and volume.
+
+	Width and height attribute defines the size. It is also a good idea to always include width and height attributes.If height and width are set, the space required for the video is reserved when the page is loaded.However, without these attributes, the browser does not know the size of the video, and cannot reserve the appropriate space to it.The effect will be that the page layout will change while the video loads. The output of the code in Example2 is as follows:
+
+	Sample 2
+
+	Example2a.html
+
+	Browser Support for <video element>:
+
+	Browser - Version
+	Chrome - 4.0
+	Firefox - 3.5
+	Safari - 4.0
+	Internet Explorer - 9.0
+	Opera - 10.5
+	2b. <audio> Tag:
+
+	HTML5 defines a new element which specifies a standard way to embed an audio file on a web page. The file formats supported for the <audio> element are:
+	Mp3
+	Wav
+	Ogg
+	The following example demonstrates the usage of <audio> element in HTML5.
+
+	Example3
+	HTML:
+	<!DOCTYPE html>
+	<html>
+	<head><title>Go4Expert Audio Example</title></head>
+	<body>
+
+	<h3>
+	Go4Expert Audio Example
+	</h3>
+	<audio controls>
+	  <source src="http://imgs.g4estatic.com/html/html4-vs-html5/test.mp3" type="audio/mpeg">
+	  Your browser does not support the audio element.
+	</audio>
+	</body>
+	</html>
+	Sample 3
+
+	Example3.html
+
+	Browser Support for <audio element>:
+
+	Browser - Version
+	Chrome - 4.0
+	Firefox - 3.5
+	Safari - 4.0
+	Internet Explorer - 9.0
+	Opera - 10.5
+	3. <article> Tag:
+
+	The <article> element shows the portion of a web page that contains a complete and independent material.
+	An article from magazine or newspaper
+	A blog entry
+	Any comment by user
+	Or some other content item.
+	Example4 demonstrates the usage of <article> element in HTML5.
+
+	Example4
+
+	HTML:
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<head><title>Go4Expert Article Example</title></head>
+	</head>
+	<body>
+	<h3>
+	Go4Expert Article Example
+	</h3>
+	<article>
+	  <h1>Go 4 Expert</h1>
+	  <p>Go4Expert is the best site to learn programming and other computer related skills.</p>
+	</article>
+	</body>
+	</html>
+	The output of the code in Example4 is as follows:
+
+	Sample 4
+
+	Example4.html
+
+	4. <main> Tag
+
+	The <main> tag is also a new addition in HTML5. The <main> tag describes the material which is specific to only that document. The material which is used again and again in the documents should not be included in the <main> tag.The <main> tag can be used only one time in a page. There should be no other <main> on the same page.Another rule to be followed is that <main> tag cannot be used as descendant of an <article>, < aside >, < header >, <footer>, or <nav> element. Example8 demonstrates the usage of <main> tag. The fifth example of this tutorial demonstrates the usage of the <main> tag.
+
+	Example5:
+	HTML:
+	<!DOCTYPE html>
+	<html>
+	<head><title>WorldCup Football 2014</title></head>
+	<body>
+	<main>
+	  <h1>Football WorldCup</h1>
+	  <p>Football is the most popular game in the world football world is held after four years.</p>
+	  <article>
+		<h1>Defending Champion</h1>
+		<p>Spain is defending champion. Spain won the last worldcup which was held in South Africa.</p>
+	  </article>
+	  <article>
+		<h1>Most Time Cahmpion</h1>
+		<p>Brazil has won the title five times. Most by any nation.</p>
+	  </article>
+	  <article>
+		<h1>Current WorldCup</h1>
+		<p>Current worldcup is being held in Brazil.</p>
+	  </article>
+	</main>
+	</body>
+	</html>
+	In the above example the <main> tag defines the main content of the page. Every other content is inside the <main> tag. It may be an article or some heading or anything else. The output of the code in Example5 is as follows:
+
+	Sample 5
+
+	Example5.html
+
+	Browser Support for main tag:
+
+	Browser - Version
+	Chrome - 6.0
+	Firefox - 4.0
+	Safari - 5.0
+	Internet Explorer - No Support
+	Opera - 11.1
+	5. <mark> Tag:
+
+	The <mark> element allows you to highlight text in a webpage. The tag has also been introduced in HTML5 and did not exist previously. The following example demonstrates the usage of <mark> tag.
+
+	Example6:
+	HTML:
+	<!DOCTYPE html>
+	<html>
+	<head><title>Go4Expert Mark Tag Example</title></head>
+	<body>
+	<h1>
+	Go4Expert Mark Tag Example
+	</h1>
+	<p> <mark> Go4Expert </mark> Has best programming tutorials</p>
+	<p> <mark> This can be a line. </mark> </p>
+	<p> Or can be a <mark> portion </mark> of the text. </mark> </p>
+	</body>
+	</html>
+	The output of the code in Example6 is as follows:	

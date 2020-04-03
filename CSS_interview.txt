@@ -1,0 +1,138 @@
+Q : Name all the modules which are used in the current version of CSS.
+
+A : There are several modules in CSS as stated below:
+	Selectors
+	Box Model
+	Backgrounds and Borders
+	Text Effects
+	2D/3D Transformations
+	Animations
+	Multiple Column Layout
+	User Interface.
+	
+Q : Distinguish between CSS2 and CSS3.
+
+A : The differences between CSS2 and CSS3 are as follows:
+	CSS3 is divided into two various sections which are called a module. Whereas in CSS2 everything accedes into a single document with all the information in it.
+	CSS3 modules are supported almost on every browser and on the other hand modules of CSS and CSS2 are not supported in every 
+	browser.
+	In CSS3, we will find that many graphics related characteristics have been introduced like Border-radius or box-shadow, flexbox.	
+	In CSS3, a user can precise multiple background images on a webpage by using properties like background-image, background-position, and background-repeat styles.
+	
+Q : Cite different types of CSS.
+
+A : There are three types of CSS as mentioned below:
+	External: These are written in separate files.
+	Internal: These are cited at the top of the web page code document.
+	Inline: These are written right next to the text.
+
+Q : Explain the concept of Tweening.
+
+A : Tweening is the process in which we create intermediate frames between two images to get the appearance of the first
+	 image which develops into the second image.
+	
+Q : What are gradients in CSS?
+
+A : It is a property of CSS which allows you to display a smooth transformation between two or more than two specified colors.
+	There are two types of gradients that are present in CSS. 
+	They are:
+	Linear Gradient
+	Radial Gradient
+	
+Q : What is CSS flexbox?
+
+A : It allows you to design a flexible responsive layout structure without using any float or positioning property of CSS. 
+	To use CSS flexbox you need to define a flex container initially.
+	<!DOCTYPE html>
+	<html>
+	<head>
+
+	<style>
+	.flex-container {
+	  display: flex;
+	  background-color: #f4b042;
+	}
+
+	.flex-container > div {
+	  background-color: #d60a33;
+	  margin: 10px;
+	  padding: 20px;
+	  font-size: 30px;
+	}
+
+	</style>
+	</head>
+
+	<body>
+	<div class="flex-container">
+	  <div>1</div>
+	  <div>2</div>
+	  <div>3</div> 
+	</div>
+	<p> Example of  <em>flex</em>box.</p>
+	</body>
+	</html>
+
+Q : Write all the properties of the flexbox.
+
+A : There are several properties of the flexbox that are used in the HTML webpage.
+	They are:
+	flex-direction
+	flex-wrap
+	flex-flow
+	justify-content
+	align-items
+	align-content
+
+Q : What is the difference between padding and margin?
+
+A : In CSS, the margin is the property by which we can create space around elements. 
+	We can even create space to the exterior defined borders.
+	
+	In CSS, padding is the property by which we can generate space around an element’s content as well as inside any known border.
+
+Q : What is the use of the Box Model in CSS?
+
+A : In CSS, the box model is a box that binds all the HTML elements and it includes features like margins, border, padding, 
+	and the actual content.
+	By using a box model we will get the authority to add the borders all around the elements and we can also define the space between the elements.
+
+Q : What are the differences between relative and absolute in CSS?
+
+A : The main difference between relative and absolute is that “relative” is used for the same tag in CSS and it means that 
+	if we write the left:10px then the padding will shift to 10px in the left while absolute is totally relative to the non-static parent.
+	It means, if we write left:10px then the result will be 10px far from the left edge of the parent element.
+
+Q : Define ‘important’ declarations used in CSS.
+
+A : Important declarations are defined as that declaration which is having more importance than the normal declaration.
+
+Q : Differentiate between inline and block element.
+
+A : Inline element does not have an element to set width and height and also it does not have the line break.
+	Example: em, strong, etc.
+	Block element specification:
+	They do have the line break.
+	They define the width by setting a container and also allow setting height.
+	It can also contain an element that occurs in the inline element.
+
+	Example:
+	width and height
+	max-width and max-height
+	min-width and min-height
+	hi (i=1-6)- heading element
+	p- Paragraph element.
+
+
+
+
+	
+ 
+
+
+
+	
+
+
+	
+		
