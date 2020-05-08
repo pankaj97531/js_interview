@@ -112,9 +112,44 @@ Q : Call apply and bind
 
 Q : What is delete method in javascript
 
+	The JavaScript delete operator removes a property from an object; if no more references to the same property are held, it is eventually released automatically.
+	const Employee = {
+	  firstname: 'John',
+	  lastname: 'Doe'
+	};
+
+	console.log(Employee.firstname);
+	// expected output: "John"
+
+	delete Employee.firstname;
+
+	console.log(Employee.firstname);
+	// expected output: undefined
+
 Q : Object method in javascript
 
 Q : Event loop
+
+	Javascript is single threaded asynchronous programming language.
+	Single threaded means : main thread runs code one line time manner.
+	Heap Region : Random allocation of memeory and used for memeory allocation
+	Stack region : For allocating the memeory in the form of stack and is used to manage function.
+	Stack is a linear data structure in which addition or removal of element follows a particular order i.e. LIFO(Last in First Out) AND FILO(First in Last Out).
+	{
+		https://www.geeksforgeeks.org/implementation-stack-javascript/
+		https://medium.com/better-programming/implementing-a-stack-in-javascript-73d1aa0483c1
+	}
+	Stacks are data structures that follow the Last-In-First-Out (LIFO) principle, meaning the last item inserted into a stack is the first one to be deleted.
+	In other words, a stack is a list of elements that are accessible only from one end of the list, which is called the Top of Stack (ToS).
+	Stack is continuously keep tracking of function at run time.
+	Web API : DOM , AJAX request, timer , task difficult to perform at main thread.
+	Javascript runtime is single threaded.	Browser on the other hand browser has capability to respond multiple thread  perform task assinged to it.
+	Event Loop : Event Loop is that enitity whicn pull stuff out of event queue and places it on to the function execution stack.whenevever function stack is empty.
+	Event Queue : Event queue is special queue keeps track of all the event appending to gets exccuted in javascript.That piece of code that is wating to run but hasnot get schdule to run.
+
+	for example :
+	setTimeout -------> loads in function stack ----------> calls webapi provided to it by browser-------->fire a timer-------->settimeout executed---------->code execution flow contineue-------->after certain time web api call caaback function and places it into event queue------------>acllback function has not been runwaiting for its turn on js run time------->all stack is empty ----------->event loop takes first function getting to execution and places it on to the stack 	
+	
 
 Q : why we are using react over any other framework
 
@@ -151,3 +186,143 @@ Q : https://www.toptal.com/nodejs/top-10-common-nodejs-developer-mistakes
 Q : What is controlled component and uncontrolled component.
 
 Q : How to resolve CORS(Access-Control-Allow-Origin) in react and nodejs.
+
+virtual dom sits on top of the browser html dom.Virtual dom listen for changes.If there is change then the HTML DOM underneath is updated with the new UI.By comparing the changes with virtual dom the real dom is able to update the UI.
+The react virtual dom is mounting the real browser dom.
+
+componentdidmount : this tell us virtual dom of successfully mounted the real dom.
+
+Q. What is controlled component and uncontrolled component.
+
+Three principle of redux : 
+
+1. There is only one source of truth.
+
+2. State is read only.
+
+3. Changes are made with pure function.
+
+controlled Component
+
+No direct access to DOM.
+No access to input.
+Only concern to altering state.
+Rely on React To manupulate the dom.
+Use state and virtual dom to access the data
+
+Uncontrolled Component
+
+In a controlled component, form data is handled by a React component. 
+The alternative is uncontrolled components, where form data is handled by the DOM itself.
+you can use a ref to get form values from the DOM.
+
+example of Uncontrolled :
+class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.input = React.createRef();
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.input.current.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" ref={this.input} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    );
+  }
+}
+
+Difference between React Router 3 and 4.
+
+React Router 3 used config based roting(route.js)
+
+React Router 4 is pure component.
+
+React router dom and react router re export all of react router.
+
+React router 5 {
+
+	Fully backward compatible with 4.x
+	
+	Better support of React 16
+	
+	New Context API
+	
+	Allow array of route for single component
+
+}
+
+React Router 
+
+	Browserrouter : Handle dynamic request
+	
+	Hashrouter : static website
+	
+Redux : 
+
+	Describe Application state as plain object and array.
+	
+	Describe changes in the system as plain object.
+	
+	Describe the logic for handling changes as pure function.
+	
+Pure function : 
+
+	Given the same input will always return same output.
+
+	Produces no side effect.
+
+Store : 
+
+	Hold application state 
+		
+	Allow access to state via getState
+
+	Allows state to be updated via actions
+
+	One store per application	
+	
+Redux form :
+
+	React does not provide a form solution.
+		
+	Redux form are a popular form solution for react.
+	
+	Redux provide many prop (dirty,pristine,submitting,pristine)
+	
+	Redux provide form validation
+	
+	Redux form reuseablility.
+
+Redux form validator : 
+
+	combineValidators,
+	
+	composeValidators,
+	
+	isRequired,
+	
+	hasLengthBetween,
+	
+	hasLengthLessThan,
+	
+	isAlphabetic,
+
+	invalid,
+	
+	submitting,
+	
+	pristine
+		
+	
+		

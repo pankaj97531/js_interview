@@ -1,0 +1,223 @@
+What are directive?
+
+Directive are instruction to DOM.
+
+There are three kinds of directives in Angular
+
+	1.Components—directives with a template.
+	
+	2.Structural directives—change the DOM layout by adding and removing DOM elements.
+	
+	3.Attribute directives—change the appearance or behavior of an element, component, or another directive.
+	
+structural directives in angular{ngIf,ngFor,ngSwitch}
+
+attribute directives,{ngClass,ngStyle}
+
+custom attribute directive{ElementRef,nativeElement,renderer2,@HostListener() eventname,@Input},
+
+custom structural  directive{TemplateRef,ViewContainerRef,createEmbeddedView,clear},
+
+custom pipe
+
+renderer 
+
+metadata (https://angular.io/guide/architecture)
+
+compoenent selector
+
+ngStyle 
+
+ngClass
+
+ngModalChange
+
+ng-template
+
+native properties and events in angular
+
+custom properties and events in angular(directive) 
+
+custom properties and events in angular(component)
+
+lazyloading
+
+ng-content 
+
+life cycle{
+constructor
+ngonchages
+ngoninit
+ngdocheck
+ngaftercontentinit
+ngaftercontentchecked
+ngafterviewinit
+ngafterviewchecked
+ngondestroy
+
+}
+
+directive {
+	attribute directive (change the property of directive),
+	structural directive (changes the structure of directive)
+}
+
+Directive {
+	renderer,
+	custom structural directive in angular take input
+}
+
+property binding,
+event binding,
+string interpolation,
+two way binding,
+
+
+task To Do App
+
+
+router {
+	routes,
+	routerModule,
+	roterLink,
+	absolutePath,
+	relativePath,
+	RouterLinkActive,
+	RouterLinkActiveOptions,
+	router.navigate,
+	activatedRoute,
+	queryparam,
+	fragments,
+	queryparamhandling,
+	CanActivate,
+	CanActivateChildren,
+	ActivatedRouteSnapshot,
+	RouterStateSnapshot,
+	canDeactivate,
+	notfoundRoute(wildcard),
+	staticData and dynamicData pass in route,
+	resolve,
+	dataProperties In Route
+	
+}
+
+Observable {
+	New EventEmitter,
+	Subscription,
+	Observable.create,
+	Subject,
+	BehaviorSubject,
+	take(operator),
+	exhaustMap(operator)
+}
+
+Form {
+	ngModel without bracket,
+	localRef,
+	ngSubmit,
+	ngForm with localRef,
+	HTMLFormElement,
+	viewChild(),
+	validator
+	ngForm : {
+		dirty,
+		valid,
+		value,
+		disabled,
+		touched,
+		class : ng-dirty ng-touched ng-valid ng-pristine,
+		#htmlinputname = "ngModel",
+		default selection with [ngModel](set default values with ngModel with property binding),
+		two way binding,
+		ngModelGroup
+		radioButton,
+		signupform.setValue,
+		signupform.form.patchvalue,
+		reset,
+		
+		
+	}
+}
+
+ReactiveForm { 
+	ReactiveFormModule(Module.ts),
+	FormGroup,
+	FormControl,
+	Property Binding FormGroup,
+	formControlName,
+	.get helper method,
+	validators,
+	nestedFormGroup,
+	formGroupName,
+	FormArray,
+	formArrayName,
+	customValidation ,
+	customValidationAsync,
+	valueChange,
+	statusChange,
+	setValue,
+	patchValue,
+	reset,
+	FormBuilder,
+}
+
+HttpRequest : {
+	HttpClientModule(module),	
+	HttpClient(component constructor),
+	headers : HttpHeaders{
+		
+	},
+	params : HttpParams,
+	HttpParams.set,
+	HttpParams.append(add multiple params),
+	observe{body,response,events},
+	responseType{json,text}responseType: 'arraybuffer' | 'blob' | 'json' | 'text',
+	tap(operator),
+	HttpIntercetor(interceptor),
+	intercept(HttpRequest,next:HttpHandler),
+	{
+	provide:HTTP_INTERCEPTOR,
+	useClass : Service On which It has to apply,
+	multi : true
+	}(pass in module),
+	res.clone,
+	next.handle,
+	
+	
+}
+authentication{
+	user {
+		email,
+		id,
+		token,
+		tokenExporationDate,
+		get token
+	}
+	
+}
+
+DynamicComponent{
+	ComponentFactoryResolver,
+	.resolveFactoryComponent,
+	
+}
+
+Persistant state : {
+	Backend data is persistant state(state always exists)
+}
+
+
+
+Difference between subject and observable
+subject{
+multicast and hot obsservable,
+unicast and cold observable
+}
+
+ng g c recipes/recipe-list/recipe-item --skipTests true
+
+
+
+What is ng-template
+
+What is difference between FormBuilder and FormGroup 

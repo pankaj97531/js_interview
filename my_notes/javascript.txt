@@ -113,3 +113,14 @@ https://alligator.io/js/settimeout-setinterval/
 https://develoger.com/settimeout-vs-setinterval-cff85142555b
 
 https://stackoverflow.com/questions/12008120/console-log-timestamps-in-chrome
+
+What would be the result of 3+2+"7"?
+
+36. What are escape characters?
+
+Example:
+
+document.write "I m a "good" boy"
+document.write "I m a \"good\" boy"
+
+Hoisting in JavaScript

@@ -7,8 +7,18 @@ Q : How many types of layouts are there in Bootstrap?
 
 A : There are two types of layouts in Bootstrap.
 	They are:
-	Fluid Layout
-	Fixed Layout	
+	Fluid Layout : {
+		relative width, no media query
+	}
+	Fixed Layout : {
+		set width , no media query
+	}
+	Adaptive Layout : {
+		set or relative width, device and resolution driven media query
+	}
+	Responsive Layout : {
+		relative width, device and resolution driven media query
+	}	
 	
 Q : Define Fluid Layout.
 

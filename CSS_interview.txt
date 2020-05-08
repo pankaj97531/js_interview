@@ -10,6 +10,26 @@ A : There are several modules in CSS as stated below:
 	Multiple Column Layout
 	User Interface.
 	
+Q : What is Box Model : 
+
+A : All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.
+
+	The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:	
+	
+	Explanation of the different parts:
+
+	Content - The content of the box, where text and images appear
+	Padding - Clears an area around the content. The padding is transparent
+	Border - A border that goes around the padding and content
+	Margin - Clears an area outside the border. The margin is transparent
+	The box model allows us to add a border around elements, and to define space between elements. 
+	div {
+	  width: 300px;
+	  border: 15px solid green;
+	  padding: 50px;
+	  margin: 20px;
+	}
+	
 Q : Distinguish between CSS2 and CSS3.
 
 A : The differences between CSS2 and CSS3 are as follows:
@@ -83,6 +103,23 @@ A : There are several properties of the flexbox that are used in the HTML webpag
 	justify-content
 	align-items
 	align-content
+	
+Q : CSS Text Properties
+
+A : Text-align	
+	text-lign-last
+	text-transform
+	text-indent
+	word-spacing
+	letter-apcing
+	
+Q : White space values
+
+A : Normal
+	Nowrap
+	Pre
+	pre-line
+	pre-wrap
 
 Q : What is the difference between padding and margin?
 
@@ -107,6 +144,23 @@ Q : Define ‘important’ declarations used in CSS.
 
 A : Important declarations are defined as that declaration which is having more importance than the normal declaration.
 
+Q : What does the "+" (plus sign) CSS selector mean?
+
+A : The "+" sign selector is used to select the elements that are placed immediately after the specified element but not inside 
+	the particular elements. Adjacent sibling selectors. 
+	
+Q : What does the ">" (plus sign) CSS selector mean?
+
+A : Used to directly with in element. 
+
+Q :  What does the "~" (plus sign) CSS selector mean?
+
+A : General sibling selectors.
+
+Q : CSS Pseudo-Classes Selectors
+
+A : :first-child , :lst-child, :nth-child(), :empty, :link, :hover, :visited, :active, :target, :focus, :checked, :disabled, :enbale, :required, :valid, :invalid, :default, :root 
+	
 Q : Differentiate between inline and block element.
 
 A : Inline element does not have an element to set width and height and also it does not have the line break.
@@ -123,16 +177,4 @@ A : Inline element does not have an element to set width and height and also it 
 	hi (i=1-6)- heading element
 	p- Paragraph element.
 
-
-
-
-	
- 
-
-
-
-	
-
-
-	
-		
+Q : Semantic UI
