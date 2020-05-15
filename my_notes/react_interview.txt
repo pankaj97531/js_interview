@@ -148,7 +148,7 @@ Q : Event loop
 	Event Queue : Event queue is special queue keeps track of all the event appending to gets exccuted in javascript.That piece of code that is wating to run but hasnot get schdule to run.
 
 	for example :
-	setTimeout -------> loads in function stack ----------> calls webapi provided to it by browser-------->fire a timer-------->settimeout executed---------->code execution flow contineue-------->after certain time web api call caaback function and places it into event queue------------>acllback function has not been runwaiting for its turn on js run time------->all stack is empty ----------->event loop takes first function getting to execution and places it on to the stack 	
+	setTimeout -------> loads in function stack ----------> calls webapi provided to it by browser-------->fire a timer-------->settimeout executed---------->code execution flow contineue-------->after certain time web api call callback function and places it into event queue------------>acllback function has not been run waiting for its turn on js run time------->all stack is empty ----------->event loop takes first function getting to execution and places it on to the stack 	
 	
 
 Q : why we are using react over any other framework
@@ -187,8 +187,8 @@ Q : What is controlled component and uncontrolled component.
 
 Q : How to resolve CORS(Access-Control-Allow-Origin) in react and nodejs.
 
-virtual dom sits on top of the browser html dom.Virtual dom listen for changes.If there is change then the HTML DOM underneath is updated with the new UI.By comparing the changes with virtual dom the real dom is able to update the UI.
-The react virtual dom is mounting the real browser dom.
+	virtual dom sits on top of the browser html dom.Virtual dom listen for changes.If there is change then the HTML DOM underneath is updated with the new UI.By comparing the changes with virtual dom the real dom is able to update the UI.
+	The react virtual dom is mounting the real browser dom.
 
 componentdidmount : this tell us virtual dom of successfully mounted the real dom.
 

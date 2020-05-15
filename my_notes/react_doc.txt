@@ -1,0 +1,183 @@
+virtual dom sits on top of the browser html dom.Virtual dom listen for changes.If there is change then the HTML DOM underneath is updated with the new UI.By comparing the changes with virtual dom the real dom is able to update the UI.
+The react virtual dom is mounting the real browser dom.
+
+componentdidmount : this tell us virtual dom of successfully mounted the real dom.
+
+Q. What is controlled component and uncontrolled component.
+
+Three principle of redux : 
+
+1. There is only one source of truth.
+
+2. State is read only.
+
+3. Changes are made with pure function.
+
+controlled Component
+
+No direct access to DOM.
+No access to input.
+Only concern to altering state.
+Rely on React To manupulate the dom.
+Use state and virtual dom to access the data
+
+Uncontrolled Component
+
+In a controlled component, form data is handled by a React component. 
+The alternative is uncontrolled components, where form data is handled by the DOM itself.
+you can use a ref to get form values from the DOM.
+
+example of Uncontrolled :
+class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.input = React.createRef();
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.input.current.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" ref={this.input} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    );
+  }
+}
+
+Difference between React Router 3 and 4.
+
+React Router 3 used config based roting(route.js)
+
+React Router 4 is pure component.
+
+React router dom and react router re export all of react router.
+
+React router 5 {
+
+	Fully backward compatible with 4.x
+	
+	Better support of React 16
+	
+	New Context API
+	
+	Allow array of route for single component
+
+}
+
+React Router 
+
+	Browserrouter : Handle dynamic request
+	
+	Hashrouter : static website
+	
+Redux : 
+
+	Describe Application state as plain object and array.
+	
+	Describe changes in the system as plain object.
+	
+	Describe the logic for handling changes as pure function.
+	
+Pure function : 
+
+	Given the same input will always return same output.
+
+	Produces no side effect.
+
+Store : 
+
+	Hold application state 
+		
+	Allow access to state via getState
+
+	Allows state to be updated via actions
+
+	One store per application	
+	
+Redux form :
+
+	React does not provide a form solution.
+		
+	Redux form are a popular form solution for react.
+	
+	Redux provide many prop (dirty,pristine,submitting,pristine)
+	
+	Redux provide form validation
+	
+	Redux form reuseablility.
+
+Redux form validator : 
+
+	combineValidators,
+	
+	composeValidators,
+	
+	isRequired,
+	
+	hasLengthBetween,
+	
+	hasLengthLessThan,
+	
+	isAlphabetic,
+
+	invalid,
+	
+	submitting,
+	
+	pristine
+		
+What is JSX compiler.
+
+What is compiler in react.
+
+What is best practices you should use to develop react project.
+
+	1. Keep components small and function-specific
+	2. Reusability is important, so keep creation of new components to the minimum required
+	3. Consolidate duplicate code – DRY your code
+		{
+			One way to do this is to avoid duplication – Don’t Repeat Yourself (DRY).
+		}
+	4. Put CSS in JavaScript
+		{
+			When you start working on a project, it is a common practice to keep all the CSS styles in a single SCSS file. The use of a global prefix prevents any potential name collisions. However, when your project scales up, this solution may not be feasible.
+			There are many libraries that enable you to write CSS in JS. EmotionJS and Glamorous are the two most popular CSS in JS libraries.
+		}
+	7. Use capitals for component names
+	8. Mind the other naming conventions
+		{
+			When working with React, you are generally using JSX (JavaScript Extension) files. Any component that you create for React should therefore be named in upper camel case. This translates to names without spaces and the capitalizing the first letter of every word.
+			If you want to create a function that submits a form, you should name it SubmitForm in upper camel case, rather than submitForm, submit_form, or submit_form. Camel case is also called Pascal case. Here is a further list of examples of variable and function names in Pascal case.
+		}
+	10. Code should execute as expected and be testable
+	11. All files related to any one component should be in a single folder
+	13. Use snippet libraries(for doing fast coding by less effort)
+	14. Write tests for all code
+	15. Follow linting rules, break up lines that are too long	
+What is best way to develop react project so that any other developer would understand easily. 
+
+
+What is Design Principles of Reactjs
+
+How to write highly readable React code — 10 coding style tips : 
+
+	Tip #1: Always use prop-types to define all the props in your components
+	Tip #2: Use displayName to define a particular name to your component
+	Tip #3: Use a linter to make your code easier to review
+	Tip #4: Review your own code before creating a pull request
+	Tip #6: Split your code into multiple smaller functions
+	Tip #7: Create multiple files instead of writing a big file
+	Tip #8: Be very careful while naming your files
+	Tip #9: Always write tests for your code
+	Tip #10: Don’t over-use the error handling lifecycle hook
+	
+		
