@@ -124,3 +124,7 @@ document.write "I m a "good" boy"
 document.write "I m a \"good\" boy"
 
 Hoisting in JavaScript
+
+How to clean memory of javascript closure.
+
+closure practical example : onclick of input field pop up should display and input field updated with help of popup.
