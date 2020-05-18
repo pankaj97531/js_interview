@@ -1,3 +1,12 @@
+Q : How React works ?
+
+A : https://www.youtube.com/watch?v=mLMfx8BEt8g
+
+Q : What is Redux ?
+
+A : https://redux.js.org/
+
+
 Q : What is memo in react
 
 	React.memo is a higher order component. It’s similar to React.PureComponent but for function components instead of classes.
