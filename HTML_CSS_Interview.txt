@@ -1,6 +1,6 @@
 Q : What is semantic HTML?
 
-A : Semantic HTML is a coding style. It is the use of HTML markup to reinforce the semantics or meaning of the content. For example: In  
+	Semantic HTML is a coding style. It is the use of HTML markup to reinforce the semantics or meaning of the content. For example: In  
 	semantic HTML <b> </b> tag is not used for bold statement as well as <i> </i> tag is used for italic. Instead of these we use
 	<strong></strong> and <em></em> tags.
 
@@ -18,14 +18,23 @@ Q : Is it possible to change the color of the bullet?
 A : The color of the bullet is always the color of the first text of the list. 
 	So, if you want to change the color of the bullet, you must change the color of the text.
 	
+Q : What happens if we don't use it!?
+
+	Not mentioning DOCTYPE will pose threat to browser compatibility and the use of older versions of HTML.The browser will not support the use of certain new features and tags that come with latest versions of the mark up languages.A DOCTYPE also controls whether the browsers uses standard or quirk mode to render the document.
+	
 Q : Does a <!DOCTYPE html> tag is a HTML tag?
 
-A : No, the <!DOCTYPE html> declaration is not an HTML tag. There are many type of HTML e.g. HTML 4.01 Strict, HTML 4.01 Transitional, 
+	The <!DOCTYPE html> declaration is used to inform a website visitor's browser that the document being rendered is an HTML document. While not actually an HTML element itself,
+	
+	No, the <!DOCTYPE html> declaration is not an HTML tag. There are many type of HTML e.g. HTML 
+	4.01 	Strict, HTML 4.01 Transitional,
+	
+		
 	HTML 4.01 Frameset, XHTML 1.0 Strict, XHTML 1.0 Transitional, XHTML 1.0 Frameset, XHTML 1.1 etc. So, <!DOCTYPE html> is used to instruct the web browser about the HTML page.	
 
 Q : What is SVG?
 
-A : SVG images and their behaviors are defined in XML text files. So as XML files, you can create and edit an SVG image with the text 
+	SVG images and their behaviors are defined in XML text files. So as XML files, you can create and edit an SVG image with the text 
 	editor. It is mostly used for vector type diagrams like pie charts, 2-Dimensional graphs in an X, Y coordinate system.	
 	
 Q : What are the different new form element types in HTML 5?
@@ -44,7 +53,7 @@ A : Following is a list of 10 frequently used new elements in HTML 5:
 	
 Q : What is datalist tag?
 
-A : The HTML 5 datalist tag provides an autocomplete feature on the form element. It facilitates users to choose the predefined options 
+	The HTML 5 datalist tag provides an autocomplete feature on the form element. It facilitates users to choose the predefined options 
 	to the users to select data.
 	<label>    
 	 Enter your favorite cricket player: Press any character<br />    
@@ -72,3 +81,36 @@ A : <div id="header">	<header>
 	<div id="content">	<section>
 	<div id="post">		<article>
 	<div id="footer">	<footer>	
+	
+Q : Cross browser compatibility issue.
+
+Q : Which HTML5 feature not supproted by all browser.
+
+Q : How HTML rendered on browser
+
+Q : What is shadow dom.
+
+	<div id="shadowHost">Hello</div>
+	<div class="addClass">Parent Element</div>
+
+	<div id="shadowHost2"> Hello 2</div>
+	<template id="temp">
+		<style>*{color: blue;}</style>
+		<div>Hello <span class="addClass">I am shadow Element</span></div>
+	</template>
+	
+	var host = document.querySelector("#shadowHost");
+	var shadowRoot = host.createShadowRoot();
+	var divElemnt = document.createElement("div");
+	divElemnt.textContent = "Now You can see me";
+	divElemnt.className="addClass"
+
+	var host2 = document.querySelector("#shadowHost2");
+	var shadowRoot2 = host2.createShadowRoot();
+	shadowRoot2.appendChild(document.querySelector("#temp").content);
+
+	shadowRoot.appendChild(divElemnt);
+	
+	.addClass{
+		color: red;
+	}

@@ -1,130 +1,153 @@
-what is async and defer in script tag
+Q : What is Error in javascript.
 
-falsy values in javascript
+A : There are three type of error in javascript.
 
-console.log("The 7 falsy values")
-0 ? console.log("truthy") : console.log("falsy") // falsy
-0n ? console.log("truthy") : console.log("falsy") // falsy
-null ? console.log("truthy") : console.log("falsy") // falsy
-undefined ? console.log("truthy") : console.log("falsy") // falsy
-false ? console.log("truthy") : console.log("falsy") // falsy
-NaN ? console.log("truthy") : console.log("falsy") // falsy
-"" ? console.log("truthy") : console.log("falsy") // falsy
+	1.Syntax error(Parsing error).
+		Occur at compile time for traditional programming language. But in javascript it occur at interpret time.
+		Syntax error affect(reflect) total program. 
+		example : function test(){
+		
+	2. Runtime Error :
+	Runtime error are also called exception occur during exection(after compilation/execution);
+	This error is handled by try catch finally block.
+	Finally block will always get executed.
+		example  : 
+		Uncaught SyntaxError: Identifier 'testname' has already been declared
+		
+	3. 	Logical error : 
+	Error occur due to logical problem.
+	Example var newPropmt= prompt("Enter number","200");
+	alert(eval(newPropmt));
 
+Q : what is async and defer in script tag
+Q : 
+Q : falsy values in javascript
+Q : 
+Q : console.log("The 7 falsy values")
+Q : 0 ? console.log("truthy") : console.log("falsy") // falsy
+Q : 0n ? console.log("truthy") : console.log("falsy") // falsy
+Q : null ? console.log("truthy") : console.log("falsy") // falsy
+Q : undefined ? console.log("truthy") : console.log("falsy") // falsy
+Q : false ? console.log("truthy") : console.log("falsy") // falsy
+Q : NaN ? console.log("truthy") : console.log("falsy") // falsy
+Q : "" ? console.log("truthy") : console.log("falsy") // falsy
+Q : 
+Q : 
+Q : form validation without jquery
+Q : 
+Q : combination of setTimeout and setInterval
+Q : 
+Q : different types of error in javascript
+Q : 
+Q : Syntax Errors : Syntax errors are also known as parsing errors.  In JavaScript, they occur at the interpretation time.
+Q : Consider this code segment:
+Q :  <script type=''text/javascript''>
+Q :     window.show(;
+Q :   </script>
+Q :   
+Q : Runtime Errors : These type of error occurs during the runtime of the program, after it is interpreted by the compiler.
+Q : 
+Q : Consider this code segment:
+Q : 
+Q :  <script type=''text/javascript''>
+Q :     window.show();
+Q :   </script>
+Q : 
+Q : TypeError — my number two as far as occurrence in development is concerned. Thrown when we have some value and it is not of a proper type.
+Q : 
+Q : example : const someBoolen = true;
+Q : someBoolen.slice(-1); //Error : uncaught typeError : someBoolen slice is not a function.
+Q : 
+Q : ReferenceError — thrown when we want to refer to some variable that doesn’t exist.  
+Q : 
+Q : example : const name= recievedName; //error : uncaught ReferenceError .recievedName is not defined.
+Q : 
+Q : RangeError  : thrown when a value is not in an allowed range.
+Q : 
+Q : example : Number('5').toFixed(102); //error : uncaught RangeError.toFixed digit argument must be 0 to 100.
+Q : 
+Q : timestamp in javascript 
+Q : 
+Q : same function name and same variable name
+Q : 
+Q : difference between parentnode and parentelement
+Q : 
+Q : difference between cookies , localstorage and session storage
+Q : 
+Q : LocalStorage
+Q : 
+Q : Stores data with no expiration date, and gets cleared only through JavaScript, or clearing the Browser cache / Locally Stored Data
+Q : 
+Q : Storage limit is the maximum amongst the three
+Q : 
+Q : localStorage.setItem('myCat', 'Tom');
+Q : 
+Q : var cat = localStorage.getItem('myCat');
+Q : 
+Q : localStorage.removeItem('myCat');
+Q : 
+Q : localStorage.clear();
+Q : 
+Q : SessionStorage
+Q : 
+Q : The sessionStorage object stores data only for a session, meaning that the data is stored until the browser (or tab) is closed.
+Q : 
+Q : Data is never transferred to the server.
+Q : 
+Q : Storage limit is larger than a cookie (at least 5MB).
+Q : 
+Q : sessionStorage.setItem('key', 'value');
+Q : 
+Q : let data = sessionStorage.getItem('key');
+Q : 
+Q : sessionStorage.removeItem('key');
+Q : 
+Q : sessionStorage.clear();
+Q : 
+Q : Cookie
+Q : 
+Q : Stores data that has to be sent back to the server with subsequent requests. Its expiration varies based on the type and the expiration duration can be set from either server-side or client-side (normally from server-side).
+Q : 
+Q : Cookies are primarily for server-side reading (can also be read on client-side), localStorage and sessionStorage can only be read on client-side.
+Q : 
+Q : Size must be less than 4KB.
+Q : 
+Q : Cookies can be made secure by setting the httpOnly flag as true for that cookie. This prevents client-side access to that cookie
+Q : 
+Q : In order to delete a cookie set the expires date to something in the past.
+Q : 
+Q : document.cookie = "name=oeschger";
+Q : document.cookie = "favorite_food=tripe";
+Q : 
+Q : document.cookie = "user=John; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"
+Q : 
+Q : memory leak in javascript example{
+Q : https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/
+Q : }
+Q : 
+Q : https://javascript.info/settimeout-setinterval
+Q : 
+Q : https://dev.to/akanksha_9560/why-not-to-use-setinterval--2na9
+Q : 
+Q : https://alligator.io/js/settimeout-setinterval/
+Q : 
+Q : https://develoger.com/settimeout-vs-setinterval-cff85142555b
+Q : 
+Q : https://stackoverflow.com/questions/12008120/console-log-timestamps-in-chrome
+Q : 
+Q : What would be the result of 3+2+"7"?
+Q : 
+Q : 36. What are escape characters?
+Q : 
+Q : Example:
+Q : 
+Q : document.write "I m a "good" boy"
+Q : document.write "I m a \"good\" boy"
+Q : 
+Q : Hoisting in JavaScript
+Q : 
+Q : How to clean memory of javascript closure.
+Q : 
+Q : closure practical example : onclick of input field pop up should display and input field updated with help of popup.
 
-form validation without jquery
-
-combination of setTimeout and setInterval
-
-different types of error in javascript
-
-Syntax Errors : Syntax errors are also known as parsing errors.  In JavaScript, they occur at the interpretation time.
-Consider this code segment:
- <script type=''text/javascript''>
-    window.show(;
-  </script>
-  
-Runtime Errors : These type of error occurs during the runtime of the program, after it is interpreted by the compiler.
-
-Consider this code segment:
-
- <script type=''text/javascript''>
-    window.show();
-  </script>
-
-TypeError — my number two as far as occurrence in development is concerned. Thrown when we have some value and it is not of a proper type.
-
-example : const someBoolen = true;
-someBoolen.slice(-1); //Error : uncaught typeError : someBoolen slice is not a function.
-
-ReferenceError — thrown when we want to refer to some variable that doesn’t exist.  
-
-example : const name= recievedName; //error : uncaught ReferenceError .recievedName is not defined.
-
-RangeError  : thrown when a value is not in an allowed range.
-
-example : Number('5').toFixed(102); //error : uncaught RangeError.toFixed digit argument must be 0 to 100.
-
-timestamp in javascript 
-
-same function name and same variable name
-
-difference between parentnode and parentelement
-
-difference between cookies , localstorage and session storage
-
-LocalStorage
-
-Stores data with no expiration date, and gets cleared only through JavaScript, or clearing the Browser cache / Locally Stored Data
-
-Storage limit is the maximum amongst the three
-
-localStorage.setItem('myCat', 'Tom');
-
-var cat = localStorage.getItem('myCat');
-
-localStorage.removeItem('myCat');
-
-localStorage.clear();
-
-SessionStorage
-
-The sessionStorage object stores data only for a session, meaning that the data is stored until the browser (or tab) is closed.
-
-Data is never transferred to the server.
-
-Storage limit is larger than a cookie (at least 5MB).
-
-sessionStorage.setItem('key', 'value');
-
-let data = sessionStorage.getItem('key');
-
-sessionStorage.removeItem('key');
-
-sessionStorage.clear();
-
-Cookie
-
-Stores data that has to be sent back to the server with subsequent requests. Its expiration varies based on the type and the expiration duration can be set from either server-side or client-side (normally from server-side).
-
-Cookies are primarily for server-side reading (can also be read on client-side), localStorage and sessionStorage can only be read on client-side.
-
-Size must be less than 4KB.
-
-Cookies can be made secure by setting the httpOnly flag as true for that cookie. This prevents client-side access to that cookie
-
-In order to delete a cookie set the expires date to something in the past.
-
-document.cookie = "name=oeschger";
-document.cookie = "favorite_food=tripe";
-
-document.cookie = "user=John; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"
-
-memory leak in javascript example{
-https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/
-}
-
-https://javascript.info/settimeout-setinterval
-
-https://dev.to/akanksha_9560/why-not-to-use-setinterval--2na9
-
-https://alligator.io/js/settimeout-setinterval/
-
-https://develoger.com/settimeout-vs-setinterval-cff85142555b
-
-https://stackoverflow.com/questions/12008120/console-log-timestamps-in-chrome
-
-What would be the result of 3+2+"7"?
-
-36. What are escape characters?
-
-Example:
-
-document.write "I m a "good" boy"
-document.write "I m a \"good\" boy"
-
-Hoisting in JavaScript
-
-How to clean memory of javascript closure.
-
-closure practical example : onclick of input field pop up should display and input field updated with help of popup.
+Q : Difference between context and scope.

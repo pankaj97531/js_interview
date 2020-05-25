@@ -12,7 +12,7 @@ A : There are several modules in CSS as stated below:
 	
 Q : What is Box Model : 
 
-A : All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.
+	All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.
 
 	The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:	
 	
@@ -38,6 +38,11 @@ A : The differences between CSS2 and CSS3 are as follows:
 	browser.
 	In CSS3, we will find that many graphics related characteristics have been introduced like Border-radius or box-shadow, flexbox.	
 	In CSS3, a user can precise multiple background images on a webpage by using properties like background-image, background-position, and background-repeat styles.
+	
+	{
+	https://www.lifewire.com/css2-vs-css3-3466978
+	https://www.quora.com/What-are-the-differences-between-CSS2-and-CSS3
+	}
 	
 Q : Cite different types of CSS.
 
@@ -130,23 +135,23 @@ A : In CSS, the margin is the property by which we can create space around eleme
 
 Q : What is the use of the Box Model in CSS?
 
-A : In CSS, the box model is a box that binds all the HTML elements and it includes features like margins, border, padding, 
-	and the actual content.
+	In CSS, the box model is a box that binds all the HTML elements and it includes features like content, padding,margins, border. 
+
 	By using a box model we will get the authority to add the borders all around the elements and we can also define the space between the elements.
 
 Q : What are the differences between relative and absolute in CSS?
 
-A : The main difference between relative and absolute is that “relative” is used for the same tag in CSS and it means that 
+	The main difference between relative and absolute is that “relative” is used for the same tag in CSS and it means that 
 	if we write the left:10px then the padding will shift to 10px in the left while absolute is totally relative to the non-static parent.
 	It means, if we write left:10px then the result will be 10px far from the left edge of the parent element.
 
 Q : Define ‘important’ declarations used in CSS.
 
-A : Important declarations are defined as that declaration which is having more importance than the normal declaration.
+	Important declarations are defined as that declaration which is having more importance than the normal declaration.
 
 Q : What does the "+" (plus sign) CSS selector mean?
 
-A : The "+" sign selector is used to select the elements that are placed immediately after the specified element but not inside 
+	The "+" sign selector is used to select the elements that are placed immediately after the specified element but not inside 
 	the particular elements. Adjacent sibling selectors. 
 	
 Q : What does the ">" (plus sign) CSS selector mean?
@@ -159,11 +164,11 @@ A : General sibling selectors.
 
 Q : CSS Pseudo-Classes Selectors
 
-A : :first-child , :lst-child, :nth-child(), :empty, :link, :hover, :visited, :active, :target, :focus, :checked, :disabled, :enbale, :required, :valid, :invalid, :default, :root 
+	:first-child , :lst-child, :nth-child(), :empty, :link, :hover, :visited, :active, :target, :focus, :checked, :disabled, :enbale, :required, :valid, :invalid, :default, :root 
 	
 Q : Differentiate between inline and block element.
 
-A : Inline element does not have an element to set width and height and also it does not have the line break.
+	Inline element does not have an element to set width and height and also it does not have the line break.
 	Example: em, strong, etc.
 	Block element specification:
 	They do have the line break.
@@ -178,3 +183,136 @@ A : Inline element does not have an element to set width and height and also it 
 	p- Paragraph element.
 
 Q : Semantic UI
+
+Q : Difference between flexbox and grid	
+	
+	The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox was designed for layout in one dimension - either a row or a column. Grid was designed for two-dimensional layout - rows, and columns at the same time. 
+	
+Q : Short notes on flexbox
+
+	New module in css3 to easy align elemnt in different direction and orders.
+	
+	Flexbox gives ability to container to expand and shrink to best use of all available space.
+	
+	Flexbox layout replaces float layout 
+	
+	New way to build one dimentional layout(either row or column)
+	
+	Properties  : 
+	
+	display : flex It applies on parent div and all child element are flex items
+	
+	flex-direction : row(by default),row-reverse,column,column-reverse applies on parent
+	
+	flex-wrap : nowrap(by default),wrap,wrap-reverese used for handle overflow problem, apply on parent
+	
+	flex-flow : flex-direction flex-wrap
+	
+	justify-content : horizontal alignment ,(flex-start(by default), flex-end, center, space-around, space-between, space-evenly) apply on parent
+	
+	align-items : vertival alignment(work if height given), work on parent ,flex-start, flex-end, center, stretch(by default), baseline
+	
+	align-content : vertical-alignment,used with only flexwrap and content will come under second row, apply on parent,flex-start, flex-end, center, stretch(by default)
+	
+	align-self : vertical alignment, apply on child , flex-start, flex-end, center, stretch(by default), baseline
+	
+	flex-grow : work on child , used for define dynamic width, flex-grow : 1
+	
+	flex-basic : work for child and for max-width, used for handle flex-item width
+	
+	flex-shrink : work on child ,used for responsive,
+	
+Q : Short notes on grid layout
+	
+	Two dimensional grid system(rows and column can handle)
+	
+	CSS grid layout replaces float layout
+	
+	Fast and clean code
+	
+	No need of CSS framework.
+	
+	properties : 
+	
+	display : grid(apply on grid) but it won't affect anything
+	
+	position properties of grid layout for parent
+	
+	grid-template-rows,grid-template-columns : (used fr(means fraction) repeat function) we can used pixcel percentage.Apply on parent
+	
+	grid-gap : in this properties two properties are mixed (grid-row-gap,grid-column-gap).apply on parent
+	
+	grid-template-area : "header header header"
+						 "Box1 Box2 sidebar"
+						 "content content sidebar"
+						 "footer footer footer"
+
+	naming convention in grid-template-rows and grid-template-columns : [header-start]100px [header-end box-start] 200px [box-end content-start] 250px [content-end footer-start] 50px [footer-end];
+	
+	Grid position of Child Elment : 
+	
+	grid-row : combination of two properties. grid-row-start,grid-row-end
+	
+	grid-column : combination of two properties . grid-column-start,grid-column-end
+	
+	grid-area : combination of grid-row grid-column
+	 	
+Q : Which CSS feature is not working on all browser.
+
+
+Q : Why we are using float left,Flexbox when grid layout can handle all thing.
+
+	HTML render work on block element direction, inline element direction and float properties.
+	
+	We are using flexbox and grid layout on certain part of wepage.Both flexbox and grid only handle single container.
+	
+	Flexbox lines things up in one direction(either row or column).When we use flexbox browser only things about only one direction.
+	
+	Grid layout lines things in two direction. When we use grid layout browser thinks about rows and column.
+ 	
+Q : what is specificity in css.
+
+	If there are two or more conflicting CSS rules that point to the same element, the browser follows some rules to determine which one is most specific 
+	
+	example : div has less priority than div with class.div with class less priority than div with id.
+	!importance has higher priority than any other css.
+	
+Q : How to align a block elemnt inside other element.
+
+	
+	example : <div class="outer">
+					<div class="inner"></div>
+				</div> 
+			.outer{
+				margin: 100px;
+				width: 300px;
+				height: 300px;
+				background: yellow;
+				border: 1px solid black;
+				position: relative;
+			}
+			.inner{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 100px;
+				height: 100px;
+				background: green;
+				border: 1px solid red;
+				transform: translate(-50%,-50%);
+			}
+
+Q : How to make triangle in css.
+
+	example  : <div class="triangle">
+				</div>			
+		
+				.triangle{
+					margin: 100px;
+					width: 0;
+					height: 0;
+					border-bottom: 100px solid red;
+					border-top: 100px solid transparent;
+					border-left: 100px solid transparent;
+					border-right: 100px solid transparent;
+				}
