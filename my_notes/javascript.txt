@@ -18,136 +18,279 @@ A : There are three type of error in javascript.
 	Error occur due to logical problem.
 	Example var newPropmt= prompt("Enter number","200");
 	alert(eval(newPropmt));
+	
+	{
+	Uncaught ReferenceError: Cannot access 'commonObj' before initialization
+	}
+	
+	EvalError: Raised when the eval() functions is used in an incorrect manner.
+	RangeError: Raised when a numeric variable exceeds its allowed range.
+	ReferenceError: Raised when an invalid reference is used.
+	SyntaxError: Raised when a syntax error occurs while parsing JavaScript code.
+	TypeError: Raised when the type of a variable is not as expected.
+	URIError: Raised when the encodeURI() or decodeURI() functions are used in an incorrect manner.
 
 Q : what is async and defer in script tag
-Q : 
-Q : falsy values in javascript
-Q : 
-Q : console.log("The 7 falsy values")
-Q : 0 ? console.log("truthy") : console.log("falsy") // falsy
-Q : 0n ? console.log("truthy") : console.log("falsy") // falsy
-Q : null ? console.log("truthy") : console.log("falsy") // falsy
-Q : undefined ? console.log("truthy") : console.log("falsy") // falsy
-Q : false ? console.log("truthy") : console.log("falsy") // falsy
-Q : NaN ? console.log("truthy") : console.log("falsy") // falsy
-Q : "" ? console.log("truthy") : console.log("falsy") // falsy
-Q : 
-Q : 
-Q : form validation without jquery
-Q : 
-Q : combination of setTimeout and setInterval
-Q : 
-Q : different types of error in javascript
-Q : 
-Q : Syntax Errors : Syntax errors are also known as parsing errors.  In JavaScript, they occur at the interpretation time.
-Q : Consider this code segment:
-Q :  <script type=''text/javascript''>
-Q :     window.show(;
-Q :   </script>
-Q :   
-Q : Runtime Errors : These type of error occurs during the runtime of the program, after it is interpreted by the compiler.
-Q : 
-Q : Consider this code segment:
-Q : 
-Q :  <script type=''text/javascript''>
-Q :     window.show();
-Q :   </script>
-Q : 
-Q : TypeError — my number two as far as occurrence in development is concerned. Thrown when we have some value and it is not of a proper type.
-Q : 
-Q : example : const someBoolen = true;
-Q : someBoolen.slice(-1); //Error : uncaught typeError : someBoolen slice is not a function.
-Q : 
-Q : ReferenceError — thrown when we want to refer to some variable that doesn’t exist.  
-Q : 
-Q : example : const name= recievedName; //error : uncaught ReferenceError .recievedName is not defined.
-Q : 
-Q : RangeError  : thrown when a value is not in an allowed range.
-Q : 
-Q : example : Number('5').toFixed(102); //error : uncaught RangeError.toFixed digit argument must be 0 to 100.
-Q : 
-Q : timestamp in javascript 
-Q : 
-Q : same function name and same variable name
-Q : 
-Q : difference between parentnode and parentelement
-Q : 
-Q : difference between cookies , localstorage and session storage
-Q : 
-Q : LocalStorage
-Q : 
-Q : Stores data with no expiration date, and gets cleared only through JavaScript, or clearing the Browser cache / Locally Stored Data
-Q : 
-Q : Storage limit is the maximum amongst the three
-Q : 
-Q : localStorage.setItem('myCat', 'Tom');
-Q : 
-Q : var cat = localStorage.getItem('myCat');
-Q : 
-Q : localStorage.removeItem('myCat');
-Q : 
-Q : localStorage.clear();
-Q : 
-Q : SessionStorage
-Q : 
-Q : The sessionStorage object stores data only for a session, meaning that the data is stored until the browser (or tab) is closed.
-Q : 
-Q : Data is never transferred to the server.
-Q : 
-Q : Storage limit is larger than a cookie (at least 5MB).
-Q : 
-Q : sessionStorage.setItem('key', 'value');
-Q : 
-Q : let data = sessionStorage.getItem('key');
-Q : 
-Q : sessionStorage.removeItem('key');
-Q : 
-Q : sessionStorage.clear();
-Q : 
-Q : Cookie
-Q : 
-Q : Stores data that has to be sent back to the server with subsequent requests. Its expiration varies based on the type and the expiration duration can be set from either server-side or client-side (normally from server-side).
-Q : 
-Q : Cookies are primarily for server-side reading (can also be read on client-side), localStorage and sessionStorage can only be read on client-side.
-Q : 
-Q : Size must be less than 4KB.
-Q : 
-Q : Cookies can be made secure by setting the httpOnly flag as true for that cookie. This prevents client-side access to that cookie
-Q : 
-Q : In order to delete a cookie set the expires date to something in the past.
-Q : 
-Q : document.cookie = "name=oeschger";
-Q : document.cookie = "favorite_food=tripe";
-Q : 
-Q : document.cookie = "user=John; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"
-Q : 
-Q : memory leak in javascript example{
-Q : https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/
-Q : }
-Q : 
-Q : https://javascript.info/settimeout-setinterval
-Q : 
-Q : https://dev.to/akanksha_9560/why-not-to-use-setinterval--2na9
-Q : 
-Q : https://alligator.io/js/settimeout-setinterval/
-Q : 
-Q : https://develoger.com/settimeout-vs-setinterval-cff85142555b
-Q : 
-Q : https://stackoverflow.com/questions/12008120/console-log-timestamps-in-chrome
-Q : 
-Q : What would be the result of 3+2+"7"?
-Q : 
-Q : 36. What are escape characters?
-Q : 
-Q : Example:
-Q : 
-Q : document.write "I m a "good" boy"
-Q : document.write "I m a \"good\" boy"
-Q : 
-Q : Hoisting in JavaScript
-Q : 
-Q : How to clean memory of javascript closure.
-Q : 
-Q : closure practical example : onclick of input field pop up should display and input field updated with help of popup.
 
+Q : What is iterator and generator.
+
+	for of is iterator.Iterator are built in object in several data types  array, string, map, set, Nodelist .These are built in iterator.Which means there is wrapper or connected object.
+	Iterator is interface to access that object.	
+	Generator are just a nice wrapper around the iterator just make it little bit easier to use built in iterator.
+	
+Q : what is scope chain in javascript
+
+	Scope in JavaScript refers to the accessibility or visibility of variables. That is, which parts of a program have access to the variable or where the variable is visible.
+	
+	There are three types of scope in JavaScript - 1) Global Scope, 2) Function Scope, and, 3) Block Scope.
+	
+	When a variable is used in JavaScript, the JavaScript engine will try to find the variable’s value in the current scope. If it could not find the variable, it will look into the outer scope and will continue to do so until it finds the variable or reaches global scope.
+	
+Q : What is lexical scope.
+	
+	Scope of a varible is defined by its location within source code.
+	
+	Lexical Scope (also known as Static Scope) literally means that scope is determined at the lexing time (generally referred to as compiling) rather than at runtime. 
+		
+		
+Q : falsy values in javascript
+	
+	console.log("The 7 falsy values")
+	0 ? console.log("truthy") : console.log("falsy") // falsy
+	0n ? console.log("truthy") : console.log("falsy") // falsy
+	null ? console.log("truthy") : console.log("falsy") // falsy
+	undefined ? console.log("truthy") : console.log("falsy") // falsy
+	false ? console.log("truthy") : console.log("falsy") // falsy
+	NaN ? console.log("truthy") : console.log("falsy") // falsy
+	"" ? console.log("truthy") : console.log("falsy") // falsy
+
+Q : form validation without jquery
+
+Q : combination of setTimeout and setInterval
+
+Q : different types of error in javascript
+
+	Syntax Errors : Syntax errors are also known as parsing errors.  In JavaScript, they occur at the interpretation time.
+	Consider this code segment:
+	<script type=''text/javascript''>
+		window.show(;
+	</script>
+  
+	Runtime Errors : These type of error occurs during the runtime of the program, after it is interpreted by the compiler.
+
+	Consider this code segment:
+
+	<script type=''text/javascript''>
+		window.show();
+	</script>
+
+	TypeError — my number two as far as occurrence in development is concerned. Thrown when we have some value and it is not of a proper type.
+
+	example : const someBoolen = true;
+	someBoolen.slice(-1); //Error : uncaught typeError : someBoolen slice is not a function.
+	
+	ReferenceError — thrown when we want to refer to some variable that doesn’t exist.  
+
+	example : const name= recievedName; //error : uncaught ReferenceError .recievedName is not defined.
+
+	RangeError  : thrown when a value is not in an allowed range.
+
+	example : Number('5').toFixed(102); //error : uncaught RangeError.toFixed digit argument must be 0 to 100.
+	
+	timestamp in javascript 
+
+	same function name and same variable name
+
+Q : difference between parentnode and parentelement
+ 
+Q : difference between cookies , localstorage and session storage
+
+	LocalStorage
+
+	Stores data with no expiration date, and gets cleared only through JavaScript, or clearing the Browser cache / Locally Stored Data
+
+	Storage limit is the maximum amongst the three
+
+	localStorage.setItem('myCat', 'Tom');
+
+	var cat = localStorage.getItem('myCat');
+
+	localStorage.removeItem('myCat');
+
+	localStorage.clear();
+
+	SessionStorage
+
+	The sessionStorage object stores data only for a session, meaning that the data is stored until the browser (or tab) is closed.
+
+	Data is never transferred to the server.
+
+	Storage limit is larger than a cookie (at least 5MB).
+
+	sessionStorage.setItem('key', 'value');
+
+	let data = sessionStorage.getItem('key');
+
+	sessionStorage.removeItem('key');
+ 
+	sessionStorage.clear();
+
+	Cookie
+
+	Stores data that has to be sent back to the server with subsequent requests. Its expiration varies based on the type and the expiration duration can be set from either server-side or client-side (normally from server-side).
+
+	Cookies are primarily for server-side reading (can also be read on client-side), localStorage and sessionStorage can only be read on client-side.
+
+	Size must be less than 4KB.
+
+	Cookies can be made secure by setting the httpOnly flag as true for that cookie. This prevents client-side access to that cookie
+
+	In order to delete a cookie set the expires date to something in the past.
+
+	document.cookie = "name=oeschger";
+	document.cookie = "favorite_food=tripe";
+
+	document.cookie = "user=John; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"
+
+Q : memory leak in javascript example{
+	https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/
+	}
+	
+	https://javascript.info/settimeout-setinterval
+	
+	https://dev.to/akanksha_9560/why-not-to-use-setinterval--2na9
+	
+	https://alligator.io/js/settimeout-setinterval/
+	
+	https://develoger.com/settimeout-vs-setinterval-cff85142555b
+	
+	https://stackoverflow.com/questions/12008120/console-log-timestamps-in-chrome
+	
+Q : What would be the result of 3+2+"7"?
+	57
+
+Q : What are escape characters?
+
+	Example:
+
+	document.write "I m a "good" boy"
+	document.write "I m a \"good\" boy"
+	
+Q : What is closure.
+	
+	var a=10;
+	var fn = function(){
+		console.log(a);
+	}
+	setTimeout(fn,2000);
+	Settimeout is a function that comes with javascript engines,there is some code somewhere in engine which is function called settimeout.
+	We have not calling this function(fn),somebody else calling this function.When fn function is sent to somewhere else there is no any varibale(a) on that context then there is closure comes into picture.
+	Closure makes a snapshot of all varible in this(function) scope.
+	There is var a in this scope which contain value of 10 this function object.When this function created know there is a variable a this point this place in the memory and remembers it in this function itself and pass the variable to this function to settimeout.
+		
+Q : How to clean memory of javascript closure.
+	
+	
 Q : Difference between context and scope.
+
+Q : What is eval.
+
+	The eval() function evaluates JavaScript code represented as a string.
+	eval() is a function property of the global object.
+	If the completion value is empty, undefined is returned.
+	
+	function test() {
+	  var x = 2, y = 4;
+	  console.log(eval('x + y'));  // Direct call, uses local scope, result is 6
+	  var geval = eval; // equivalent to calling eval in the global scope
+	  console.log(geval('x + y')); // Indirect call, uses global scope, throws ReferenceError because `x` is undefined
+	  (0, eval)('x + y'); // another example of Indirect call
+	}
+	
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval
+	
+Q : What is interpreter and how javascript execute.(Hoisting in JavaScript)
+
+	When we artite a code in c or java there is compiltaion step happen before execute a program.
+	
+	Compilation step actully convert a source code into a intermediatly code or final object code that actually execute.At run time it not execute the source code it execute intermediatly file that is compiled.
+	
+	In c or java there is compilation step which runs through your source code generate the intermediatly file that what you execute at run time.
+	
+	In javascript we execute source code.The browser execute the code directly without creating a intermediatly file.
+
+	Source code directly execute and doesn't create a intermediatly file.
+	
+	Actually browser does two thing with javascript source code.First step is compilation step.This step browser actually looking into source code and identifying particular set up things which means is order to execute it.So souce code does not execute at first step.
+	
+	It does a compilation step where the point is not to generate intermediatly file but look for some signs and make note of certain things which needs to actually executed.Compilation step is done within fration of second. Once compilation step is done then interpretation step started where the actual code is executed.
+	
+	For example : 
+	
+	a=10;
+	var a;
+	console.log(a);//10
+	
+	JavaScript execution is process in two step.Compiler is first step.It gets the var first anyways and skip through anyways. Its var at it's top for copiler to run and then after the var process interpreter step will run and process these things.
+	
+	The idea is it doesn't matter where you declare the var it always hoisted to the top that the whole concept of hoisting.
+	
+	For avoid hoisting we should use const, let keyword and either use strict mode.
+	
+Q :	How function expression executed.
+	
+	{
+		https://stackoverflow.com/questions/3887408/javascript-function-declaration-and-evaluation-order
+	}
+
+Q : What is {} + {} in JavaScript?
+
+	{
+		https://2ality.com/2012/01/object-plus-object.html
+		https://2ality.com/2011/03/javascript-values-not-everything-is.html
+	}		
+		
+Q : What is override and shadowing in javascript;
+	
+	when we define a variable in global scope and we use that variable in function also without declaring var.Then after calling a function variable get override with function value.
+	example:
+	
+	var str1= "global";
+	function outer(){
+		str1="override";
+		alert(str1); //override
+	}
+	outer();
+	alert(str1); //override
+	======================
+	variable shadowing occur when a variable declare in global scope in this case its local scope of function has the same name the variable declared in the outer scope is not override.That is not changes the value defined outside scope.This basically shadow the varible inside.
+	For example : 
+	var str1= "global";
+	function outer(){
+		var str1="override";
+		alert(str1);
+	}
+	outer();
+	alert(str1);
+	
+Q : Can we do function overloading in javascript.
+	
+	No
+	example : 
+	function testOverload(a,b,c,d){
+		console.log("function with four parameter get executed");
+	}
+	function testOverload(a,b){
+		console.log("function with two parameter get executed");
+	}
+	function testOverload(a,b,c){
+		console.log("function with three parameter get executed");
+	}
+	testOverload(10,20);
+	output : function with three parameter get executed
+	testOverload(10,20,30);
+	output : function with three parameter get executed
+	testOverload(10,20,30,40);
+	output : function with three parameter get executed
+		
+https://exploringjs.com/es6/ch_symbols.html	

@@ -85,10 +85,20 @@ A : <div id="header">	<header>
 Q : Cross browser compatibility issue.
 
 Q : Which HTML5 feature not supproted by all browser.
+	{
+		https://stackoverflow.com/questions/565641/what-cross-browser-issues-have-you-faced
+		https://www.w3schools.com/cssref/css3_browsersupport.asp
+		https://www.w3schools.com/cssref/css3_pr_all.asp
+		https://www.w3schools.com/cssref/css3_pr_caret-color.asp
+		https://www.w3schools.com/cssref/pr_scroll-behavior.asp
+		https://www.w3schools.com/cssref/css3_pr_tab-size.asp
+	}
 
 Q : How HTML rendered on browser
 
 Q : What is shadow dom.
+	
+	CSS is basically global.If we write CSS for one element it will impact other element because it is globally.When we build web component, it is build for use different project so it needs its local CSS.When use this web component in any project should not impact the other CSS and vice versa.So we can use shadow DOM which is nothing scoped subtree inside DOM element. 
 
 	<div id="shadowHost">Hello</div>
 	<div class="addClass">Parent Element</div>
@@ -114,3 +124,11 @@ Q : What is shadow dom.
 	.addClass{
 		color: red;
 	}
+	
+Q : What is data-attribute?
+
+	In HTML if we have to store data,we can use data-attribute.Data attribute is designed to store data.
+	
+	data-name="Pankaj" data-linkname="Mylink"
+	
+		

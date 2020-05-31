@@ -259,6 +259,12 @@ Q : Short notes on grid layout
 	 	
 Q : Which CSS feature is not working on all browser.
 
+	gradient , 
+	
+	Firefox uses the Gecko rendering engine.
+	
+	
+
 
 Q : Why we are using float left,Flexbox when grid layout can handle all thing.
 
