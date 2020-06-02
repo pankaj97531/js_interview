@@ -7,11 +7,36 @@ Q : How React works ?
 
 A : https://www.youtube.com/watch?v=mLMfx8BEt8g
 	https://www.youtube.com/watch?v=gApwC9Ek9yo
+	React is javascript library used to create user interface.
+	We developer UI in multiple component.
+	
+	In HTML and JavaScript we also create UI.But there is difference in rendering.
+	If we compare it with javascript, rendering operation in javascript is expensive.
+	Browser has go through a sequence of step each time it has to render the new DOM structure.
+	
+	In react we use virtual DOM.
+	We create template in react using JSX.React compiles this templatebut instead rendering into DOM directly it create a copy of this DOM structure.
+	This new DOM structure copy of actual DOM is called a virtual DOM.
+	As we have created virtual dom for first time renders the same as it is into the browser as read DOM. And browser going to dispaly the output.
+	Now we have new data , recat will create a new copy of vitual DOM combine with new data and it copmares the new copy of virtual DOM with previous copy of virtual DOM.
+	All it is happening inside the memory nothing is getting rendered in react DOM. As we have difference in both copies.
+	After finding difference react update that part of DOM only.This new type of rendering id performance benefit.
 
 Q : What is Redux ?
 
-A : https://redux.js.org/
+	A Predictable State Container for JS Apps. It has follwoing feature :
+	Redux helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test.
+	Centralizing your application's state and logic enables powerful capabilities.
+	The Redux DevTools make it easy to trace when, where, why, and how your application's state changed. 
+	Redux works with any UI layer, and has a large ecosystem of addons to fit your needs.
+	
+	Three principle of redux : 
 
+	1. There is only one source of truth.
+
+	2. State is read only.
+
+	3. Changes are made with pure function.
 
 Q : What is memo in react
 
@@ -65,6 +90,10 @@ Q : What is server side rendering
 Q : What is three view in virtual dom
 
 	virtual dom is Virtual represntation of UI is kept in memory and synced with the react DOM by a library such as React DOM.This  process is called reconcilation.
+	
+Q : What is reconcilation.
+	
+	
 	
 Q : What is React DOM.
 
@@ -142,6 +171,9 @@ Q : What is delete method in javascript
 	// expected output: undefined
 
 Q : Object method in javascript
+	
+	Object.create(),Object.assign(), Object.freeze(), Object.keys(), Object.values(), Object.entries(),
+	Object.getOwnProperty(), Object.getOwnProperties(), Object.getOwnPropertyDescriptor(), Object.getOwnPropertyDescriptors() , Object.getOwnPropertyNames()
 
 Q : Event loop
 
@@ -182,6 +214,8 @@ Q : Reconcilation in react
 
 
 Q : semantic html in react
+	
+	Header,Main,Section,Article,Nav,Sidebar,Footer these are semantic tag inplemnted in HTML5.
 
 Q : Difference between react dom and dom 
 
@@ -192,152 +226,146 @@ A : {
 
 Q : controlled input and uncontrolled input in react
 
-Q : Memory management in javascript
+	If we controlled our input with state and onchange method then that i controlled input. If we access out input with ref then that input is called uncontrolled input.  
+
+Q : Memory management in javascript.
 
 Q : what is stack queue and heap in javascript
 
 Q : https://www.toptal.com/nodejs/top-10-common-nodejs-developer-mistakes
 
 Q : What is controlled component and uncontrolled component.
+	
+	State and onchange component is controlled component. Ref based component is uncontrolled component.
+
+	controlled Component
+
+	No direct access to DOM.
+	No access to input.
+	Only concern to altering state.
+	Rely on React To manupulate the dom.
+	Use state and virtual dom to access the data
+
+	Uncontrolled Component
+
+	In a controlled component, form data is handled by a React component. 
+	The alternative is uncontrolled components, where form data is handled by the DOM itself.
+	you can use a ref to get form values from the DOM.
+
+	example of Uncontrolled :
+	class NameForm extends React.Component {
+	  constructor(props) {
+		super(props);
+		this.handleSubmit = this.handleSubmit.bind(this);
+		this.input = React.createRef();
+	  }
+
+	  handleSubmit(event) {
+		alert('A name was submitted: ' + this.input.current.value);
+		event.preventDefault();
+	  }
+
+	  render() {
+		return (
+		  <form onSubmit={this.handleSubmit}>
+			<label>
+			  Name:
+			  <input type="text" ref={this.input} />
+			</label>
+			<input type="submit" value="Submit" />
+		  </form>
+		);
+	  }
+	}	
 
 Q : How to resolve CORS(Access-Control-Allow-Origin) in react and nodejs.
 
 	virtual dom sits on top of the browser html dom.Virtual dom listen for changes.If there is change then the HTML DOM underneath is updated with the new UI.By comparing the changes with virtual dom the real dom is able to update the UI.
 	The react virtual dom is mounting the real browser dom.
-
-componentdidmount : this tell us virtual dom of successfully mounted the real dom.
-
-Q. What is controlled component and uncontrolled component.
-
-Three principle of redux : 
-
-1. There is only one source of truth.
-
-2. State is read only.
-
-3. Changes are made with pure function.
-
-controlled Component
-
-No direct access to DOM.
-No access to input.
-Only concern to altering state.
-Rely on React To manupulate the dom.
-Use state and virtual dom to access the data
-
-Uncontrolled Component
-
-In a controlled component, form data is handled by a React component. 
-The alternative is uncontrolled components, where form data is handled by the DOM itself.
-you can use a ref to get form values from the DOM.
-
-example of Uncontrolled :
-class NameForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.input = React.createRef();
-  }
-
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.input.current.value);
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type="text" ref={this.input} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
-    );
-  }
-}
-
-Difference between React Router 3 and 4.
-
-React Router 3 used config based roting(route.js)
-
-React Router 4 is pure component.
-
-React router dom and react router re export all of react router.
-
-React router 5 {
-
-	Fully backward compatible with 4.x
 	
-	Better support of React 16
-	
-	New Context API
-	
-	Allow array of route for single component
+	with proxy 
 
-}
+	componentdidmount : this tell us virtual dom of successfully mounted the real dom.
 
-React Router 
+
+Q : Difference between React Router 3 and 4.
+
+	React Router 3 used config based roting(route.js)
+
+	React Router 4 is pure component.
+
+	React router dom and react router re export all of react router.
+
+	React router 5 {
+
+		Fully backward compatible with 4.x
+		
+		Better support of React 16
+		
+		New Context API
+		
+		Allow array of route for single component
+
+	}
+
+	React Router 
 
 	Browserrouter : Handle dynamic request
 	
 	Hashrouter : static website
 	
-Redux : 
+	Redux : 
 
-	Describe Application state as plain object and array.
-	
-	Describe changes in the system as plain object.
-	
-	Describe the logic for handling changes as pure function.
-	
-Pure function : 
-
-	Given the same input will always return same output.
-
-	Produces no side effect.
-
-Store : 
-
-	Hold application state 
+		Describe Application state as plain object and array.
 		
-	Allow access to state via getState
-
-	Allows state to be updated via actions
-
-	One store per application	
-	
-Redux form :
-
-	React does not provide a form solution.
+		Describe changes in the system as plain object.
 		
-	Redux form are a popular form solution for react.
+		Describe the logic for handling changes as pure function.
 	
-	Redux provide many prop (dirty,pristine,submitting,pristine)
-	
-	Redux provide form validation
-	
-	Redux form reuseablility.
+	Pure function : 
 
-Redux form validator : 
+		Given the same input will always return same output.
 
-	combineValidators,
-	
-	composeValidators,
-	
-	isRequired,
-	
-	hasLengthBetween,
-	
-	hasLengthLessThan,
-	
-	isAlphabetic,
+		Produces no side effect.
 
-	invalid,
-	
-	submitting,
-	
-	pristine
+	Store : 
+
+		Hold application state 
+			
+		Allow access to state via getState
+
+		Allows state to be updated via actions
+
+		One store per application	
 		
-	
+	Redux form :
+
+		React does not provide a form solution.
+			
+		Redux form are a popular form solution for react.
 		
+		Redux provide many prop (dirty,pristine,submitting,pristine)
+		
+		Redux provide form validation
+		
+		Redux form reuseablility.
+
+	Redux form validator : 
+
+		combineValidators,
+		
+		composeValidators,
+		
+		isRequired,
+		
+		hasLengthBetween,
+		
+		hasLengthLessThan,
+		
+		isAlphabetic,
+
+		invalid,
+		
+		submitting,
+		
+		pristine		
