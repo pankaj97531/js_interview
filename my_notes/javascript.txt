@@ -1,35 +1,3 @@
-Q : What is Error in javascript.
-
-A : There are three type of error in javascript.
-
-	1.Syntax error(Parsing error).
-		Occur at compile time for traditional programming language. But in javascript it occur at interpret time.
-		Syntax error affect(reflect) total program. 
-		example : function test(){
-		
-	2. Runtime Error :
-	Runtime error are also called exception occur during exection(after compilation/execution);
-	This error is handled by try catch finally block.
-	Finally block will always get executed.
-		example  : 
-		Uncaught SyntaxError: Identifier 'testname' has already been declared
-		
-	3. 	Logical error : 
-	Error occur due to logical problem.
-	Example var newPropmt= prompt("Enter number","200");
-	alert(eval(newPropmt));
-	
-	{
-	Uncaught ReferenceError: Cannot access 'commonObj' before initialization
-	}
-	
-	EvalError: Raised when the eval() functions is used in an incorrect manner.
-	RangeError: Raised when a numeric variable exceeds its allowed range.
-	ReferenceError: Raised when an invalid reference is used.
-	SyntaxError: Raised when a syntax error occurs while parsing JavaScript code.
-	TypeError: Raised when the type of a variable is not as expected.
-	URIError: Raised when the encodeURI() or decodeURI() functions are used in an incorrect manner.
-
 Q : what is async and defer in script tag
 
 Q : What is iterator and generator.
@@ -63,6 +31,27 @@ Q : falsy values in javascript
 	false ? console.log("truthy") : console.log("falsy") // falsy
 	NaN ? console.log("truthy") : console.log("falsy") // falsy
 	"" ? console.log("truthy") : console.log("falsy") // falsy
+	
+Q : What is difference between scope and context?
+
+	scope : Scope pretdends	the visibility of variable.
+	
+	context : In javascript context mens object to which method belongs.
+	
+	example : 
+	var obj1 = {
+    name : "obj1",
+    sayName : function(){
+        return this.name;
+		}
+	}
+	var obj2 = {
+		name : "obj2",
+		sayName : function(){
+			return this.name;
+		}
+	}
+	console.log(obj1.sayName.apply(obj2));
 
 Q : form validation without jquery
 
@@ -71,12 +60,19 @@ Q : combination of setTimeout and setInterval
 Q : different types of error in javascript
 
 	Syntax Errors : Syntax errors are also known as parsing errors.  In JavaScript, they occur at the interpretation time.
+	Occur at compile time for traditional programming language. But in javascript it occur at interpret time.
+	
 	Consider this code segment:
 	<script type=''text/javascript''>
 		window.show(;
 	</script>
   
 	Runtime Errors : These type of error occurs during the runtime of the program, after it is interpreted by the compiler.
+	Runtime error are also called exception occur during exection(after compilation/execution);
+	This error is handled by try catch finally block.
+	Finally block will always get executed.
+		example  : 
+		Uncaught SyntaxError: Identifier 'testname' has already been declared
 
 	Consider this code segment:
 
@@ -84,10 +80,12 @@ Q : different types of error in javascript
 		window.show();
 	</script>
 
-	TypeError — my number two as far as occurrence in development is concerned. Thrown when we have some value and it is not of a proper type.
+	TypeError - my number two as far as occurrence in development is concerned. Thrown when we have some value and it is not of a proper type.
 
 	example : const someBoolen = true;
 	someBoolen.slice(-1); //Error : uncaught typeError : someBoolen slice is not a function.
+	VM2385:1 Uncaught TypeError: Cannot use 'in' operator to search for '#<Object>' in c
+    at <anonymous>:1:9
 	
 	ReferenceError — thrown when we want to refer to some variable that doesn’t exist.  
 
@@ -96,6 +94,19 @@ Q : different types of error in javascript
 	RangeError  : thrown when a value is not in an allowed range.
 
 	example : Number('5').toFixed(102); //error : uncaught RangeError.toFixed digit argument must be 0 to 100.
+	
+	EvalError: Raised when the eval() functions is used in an incorrect manner.
+	
+	URIError: Raised when the encodeURI() or decodeURI() functions are used in an incorrect manner.
+	
+	Logical error : 
+	Error occur due to logical problem.
+	Example var newPropmt= prompt("Enter number","200");
+	alert(eval(newPropmt));
+	
+	{
+	Uncaught ReferenceError: Cannot access 'commonObj' before initialization
+	}
 	
 	timestamp in javascript 
 

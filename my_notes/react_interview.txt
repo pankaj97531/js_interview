@@ -6,6 +6,7 @@
 Q : How React works ?
 
 A : https://www.youtube.com/watch?v=mLMfx8BEt8g
+	https://www.youtube.com/watch?v=gApwC9Ek9yo
 
 Q : What is Redux ?
 
