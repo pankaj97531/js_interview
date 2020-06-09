@@ -7,6 +7,42 @@ Q : What is vitual DOM.
 		
 Q : What is JSX compiler.
 
+	Babel compiles JSX down to React.createElement() calls.
+	These two examples are identical:
+	const element = (
+	  <h1 className="greeting">
+		Hello, world!
+	  </h1>
+	);
+	
+	const element = React.createElement(
+	  'h1',
+	  {className: 'greeting'},
+	  'Hello, world!'
+	);
+	React.createElement() performs a few checks to help you write bug-free code but essentially it creates an object like this:
+	
+	Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.
+
+	Rendering an Element into the DOM
+	Let’s say there is a <div> somewhere in your HTML file:
+	
+	<div id="root"></div>
+	
+	We call this a “root” DOM node because everything inside it will be managed by React DOM.
+
+	Applications built with just React usually have a single root DOM node. If you are integrating React into an existing app, you may have as many isolated root DOM nodes as you like.
+	
+	To render a React element into a root DOM node, pass both to ReactDOM.render():
+	const element = <h1>Hello, world</h1>;
+	ReactDOM.render(element, document.getElementById('root'));
+	
+	Updating the Rendered Element
+	React elements are immutable. Once you create an element, you can’t change its children or attributes. An element is like a single frame in a movie: it represents the UI at a certain point in time.
+	With our knowledge so far, the only way to update the UI is to create a new element, and pass it to ReactDOM.render().
+	
+	For example refer : https://reactjs.org/docs/rendering-elements.html
+	
 Q : What is compiler in react.
 
 Q : What is best practices you should use to develop react project.
@@ -50,3 +86,91 @@ Q : How to write highly readable React code - 10 coding style tips :
 	Tip #8: Be very careful while naming your files
 	Tip #9: Always write tests for your code
 	Tip #10: Don’t over-use the error handling lifecycle hook
+	
+Q : can we use context for update state in consumer in react.
+	
+	{
+		https://stackoverflow.com/questions/50502664/how-to-update-the-context-value-in-provider-from-the-consumer
+	}
+		
+Q : What in contextType?
+
+Q : What are advantages of using React Hooks?
+
+	Primarily, hooks in general enable the extraction and reuse of stateful logic that is common across multiple components without the burden of higher order components or render props. Hooks allow to easily manipulate the state of our functional component without needing to convert them into class components.
+
+	Hooks don’t work inside classes (because they let you use React without classes). By using them, we can totally avoid using lifecycle methods, such as componentDidMount, componentDidUpdate, componentWillUnmount. Instead, we will use built-in hooks like useEffect .
+
+Q : What are React Hooks?
+	
+	Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class. With Hooks, you can extract stateful logic from a component so it can be tested independently and reused. Hooks allow you to reuse stateful logic without changing your component hierarchy. This makes it easy to share Hooks among many components or with the community.
+
+Q : What is StrictMode in React?
+	
+	React's StrictMode is sort of a helper component that will help you write better react components, you can wrap a set of components with <StrictMode /> and it'll basically:
+
+	Verify that the components inside are following some of the recommended practices and warn you if not in the console.
+	Verify the deprecated methods are not being used, and if they're used strict mode will warn you in the console.
+	Help you prevent some side effects by identifying potential risks.
+
+Q : Why do class methods need to be bound to a class instance?
+
+	In JavaScript, the value of this changes depending on the current context. Within React class component methods, developers normally expect this to refer to the current instance of a component, so it is necessary to bind these methods to the instance. Normally this is done in the constructor—for example:
+
+	class SubmitButton extends React.Component {
+	  constructor(props) {
+		super(props);
+		this.state = {
+		  isFormSubmitted: false
+		};
+		this.handleSubmit = this.handleSubmit.bind(this);
+	  }
+
+	  handleSubmit() {
+		this.setState({
+		  isFormSubmitted: true
+		});
+	  }
+
+	  render() {
+		return (
+		  <button onClick={this.handleSubmit}>Submit</button>
+		)
+	  }
+	}
+	
+Q : What is prop drilling and how can you avoid it?
+
+	When building a React application, there is often the need for a deeply nested component to use data provided by another component that is much higher in the hierarchy. The simplest approach is to simply pass a prop from each component to the next in the hierarchy from the source component to the deeply nested component. This is called prop drilling.
+
+	The primary disadvantage of prop drilling is that components that should not otherwise be aware of the data become unnecessarily complicated and are harder to maintain.
+
+	To avoid prop drilling, a common approach is to use React context. This allows a Provider component that supplies data to be defined, and allows nested components to consume context data via either a Consumer component or a useContext hook.
+
+Q : Describe Flux vs MVC?
+
+	Traditional MVC patterns have worked well for separating the concerns of data (Model), UI (View) and logic (Controller) — but MVC architectures frequently encounter two main problems:
+
+	Poorly defined data flow: The cascading updates which occur across views often lead to a tangled web of events which is difficult to debug.
+
+	Lack of data integrity: Model data can be mutated from anywhere, yielding unpredictable results across the UI.
+	
+	With the Flux pattern complex UIs no longer suffer from cascading updates; any given React component will be able to reconstruct its state based on the data provided by the store. The Flux pattern also enforces data integrity by restricting direct access to the shared data.	
+	
+Q : What is React Fiber?
+
+	Fiber is the new reconciliation engine or reimplementation core algorithm in React 16. Its main goal is to enable incremental rendering of the virtual DOM.The goal of React Fiber is to increase its suitability for areas like animation, layout, gestures, ability to pause, abort, or reuse work and assign priority to different types of updates; and new concurrency primitives.
+
+	The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
+
+Q : what are responsibilities of store in redux state
+
+	Holds application state;
+	Allows access to state via getState() ;
+	Allows state to be updated via dispatch(action);
+	Registers listeners via subscribe(listener) 
+	Handles unregistering of listeners via the function returned by subscribe(listener)
+	
+Q : What are default props in react
+
+	https://blog.bitsrc.io/understanding-react-default-props-5c50401ed37d	

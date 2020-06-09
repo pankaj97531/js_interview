@@ -8,23 +8,24 @@ Q : How React works ?
 A : https://www.youtube.com/watch?v=mLMfx8BEt8g
 	https://www.youtube.com/watch?v=gApwC9Ek9yo
 	React is javascript library used to create user interface.
-	We developer UI in multiple component.
+	We develop UI in React with component.
 	
 	In HTML and JavaScript we also create UI.But there is difference in rendering.
 	If we compare it with javascript, rendering operation in javascript is expensive.
 	Browser has go through a sequence of step each time it has to render the new DOM structure.
 	
 	In react we use virtual DOM.
-	We create template in react using JSX.React compiles this templatebut instead rendering into DOM directly it create a copy of this DOM structure.
+	We create template in react using JSX.React compiles this template but instead rendering into DOM directly it create a copy of this DOM structure.
 	This new DOM structure copy of actual DOM is called a virtual DOM.
-	As we have created virtual dom for first time renders the same as it is into the browser as read DOM. And browser going to dispaly the output.
-	Now we have new data , recat will create a new copy of vitual DOM combine with new data and it copmares the new copy of virtual DOM with previous copy of virtual DOM.
+	As we have created virtual dom for first time renders the same as it is into the browser as real DOM. And browser going to dispaly the output.
+	Now we have new data , react will create a new copy of vitual DOM combine with new data and it compare the new copy of virtual DOM with previous copy of virtual DOM.
 	All it is happening inside the memory nothing is getting rendered in react DOM. As we have difference in both copies.
-	After finding difference react update that part of DOM only.This new type of rendering id performance benefit.
+	After finding difference react update that part of DOM only.This new type of rendering is performance benefit.
 
 Q : What is Redux ?
 
-	A Predictable State Container for JS Apps. It has follwoing feature :
+	A Predictable State Container for JS Apps. 
+	It has follwoing feature :
 	Redux helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test.
 	Centralizing your application's state and logic enables powerful capabilities.
 	The Redux DevTools make it easy to trace when, where, why, and how your application's state changed. 
@@ -89,11 +90,35 @@ Q : What is server side rendering
 
 Q : What is three view in virtual dom
 
-	virtual dom is Virtual represntation of UI is kept in memory and synced with the react DOM by a library such as React DOM.This  process is called reconcilation.
+	virtual dom is Virtual represntation of UI is kept in memory and synced with the real DOM by a library such as React DOM.This  process is called reconcilation.
 	
 Q : What is reconcilation.
 	
+	When you use React, at a single point in time you can think of the render() function as creating a tree of React elements. On the next state or props update, that render() function will return a different tree of React elements. React then needs to figure out how to efficiently update the UI to match the most recent tree.
 	
+	If we used this in React, displaying 1000 elements would require in the order of one billion comparisons(state of art alogorith O(n^3)). This is far too expensive. Instead, React implements a heuristic O(n) algorithm based on two assumptions:
+	Two elements of different types will produce different trees.
+	The developer can hint at which child elements may be stable across different renders with a key prop.
+	The Diffing Algorithm
+	When diffing two trees, React first compares the two root elements. The behavior is different depending on the types of the root elements.
+	
+	Elements Of Different Types :
+	
+	Whenever the root elements have different types, React will tear down the old tree and build the new tree from scratch. Going from <a> to <img>, or from <Article> to <Comment>, or from <Button> to <div> - any of those will lead to a full rebuild.
+	
+	When tearing down a tree, old DOM nodes are destroyed. Component instances receive componentWillUnmount(). When building up a new tree, new DOM nodes are inserted into the DOM. Component instances receive componentWillMount() and then componentDidMount(). Any state associated with the old tree is lost.
+	
+	Any components below the root will also get unmounted and have their state destroyed. For example, when diffing:
+	
+	<div>
+	  <Counter />
+	</div>
+
+	<span>
+	  <Counter />
+	</span>
+	
+	This will destroy the old Counter and remount a new one.	
 	
 Q : What is React DOM.
 
@@ -130,6 +155,14 @@ Q : What is difference between react 15 and 16
 	
 	React.DOM as react-dom-factories
 	
+Q : What is portals.
+	
+	Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
+	example : 
+	https://codepen.io/gaearon/pen/jGBWpE
+	https://codesandbox.io/s/00254q4n6p
+	
+	
 Q : What is Error Boundary
 
 	Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed. Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.
@@ -153,6 +186,7 @@ Q : What is JSX
 	JSX may remind you of a template language, but it comes with the full power of JavaScript.
 
 Q : Call apply and bind
+	
 
 Q : What is delete method in javascript
 
@@ -192,10 +226,10 @@ Q : Event loop
 	Web API : DOM , AJAX request, timer , task difficult to perform at main thread.
 	Javascript runtime is single threaded.	Browser on the other hand browser has capability to respond multiple thread  perform task assinged to it.
 	Event Loop : Event Loop is that enitity whicn pull stuff out of event queue and places it on to the function execution stack.whenevever function stack is empty.
-	Event Queue : Event queue is special queue keeps track of all the event appending to gets exccuted in javascript.That piece of code that is wating to run but hasnot get schdule to run.
+	Event Queue : Event queue is special queue keeps track of all the event appending to gets exccuted in javascript.That piece of code that is wating to run but has not get schdule to run.
 
 	for example :
-	setTimeout -------> loads in function stack ----------> calls webapi provided to it by browser-------->fire a timer-------->settimeout executed---------->code execution flow contineue-------->after certain time web api call callback function and places it into event queue------------>acllback function has not been run waiting for its turn on js run time------->all stack is empty ----------->event loop takes first function getting to execution and places it on to the stack 	
+	setTimeout -------> loads in function stack ----------> calls webapi provided to it by browser-------->fire a timer-------->settimeout executed---------->code execution flow contineue-------->after certain time web api call callback function and places it into event queue------------>callback function has not been run waiting for its turn on js run time------->all stack is empty ----------->event loop takes first function getting to execution and places it on to the stack 	
 	
 
 Q : why we are using react over any other framework
@@ -203,14 +237,6 @@ Q : why we are using react over any other framework
 Q : how to set default prop in react
 
 Q : performance in react
-
-Q : Reconcilation in react
-
-	Reconciliation is the process through which React updates the DOM. When a component's state changes, React has to calculate if it is necessary to update the DOM. It does this by creating a virtual DOM and comparing it with the current DOM. In this context, the virtual DOM will contain the new state of the component.
-	
-	{
-	https://css-tricks.com/how-react-reconciliation-works/
-	}
 
 
 Q : semantic html in react
@@ -226,7 +252,7 @@ A : {
 
 Q : controlled input and uncontrolled input in react
 
-	If we controlled our input with state and onchange method then that i controlled input. If we access out input with ref then that input is called uncontrolled input.  
+	If we controlled our input with state and onchange method then that is controlled input. If we access input with ref then that input is called uncontrolled input.  
 
 Q : Memory management in javascript.
 
@@ -283,7 +309,7 @@ Q : How to resolve CORS(Access-Control-Allow-Origin) in react and nodejs.
 	virtual dom sits on top of the browser html dom.Virtual dom listen for changes.If there is change then the HTML DOM underneath is updated with the new UI.By comparing the changes with virtual dom the real dom is able to update the UI.
 	The react virtual dom is mounting the real browser dom.
 	
-	with proxy 
+	with proxy in package.json
 
 	componentdidmount : this tell us virtual dom of successfully mounted the real dom.
 
