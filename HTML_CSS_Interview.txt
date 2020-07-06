@@ -131,4 +131,39 @@ Q : What is data-attribute?
 	
 	data-name="Pankaj" data-linkname="Mylink"
 	
-		
+Q : How browser work ?
+https://www.youtube.com/watch?v=OE8EvaOPkZ4
+
+http://taligarsiel.com/Projects/howbrowserswork1.htm
+
+http://taligarsiel.com/ClientSidePerformance.html	
+
+https://css-tricks.com/browser-painting-and-considerations-for-web-performance/
+
+what is use of meta tag name viewport
+
+meta name robots
+
+HTML Character Entities {
+	https://www.w3schools.com/html/html_entities.asp
+}	
+
+background properties with min height css{
+	<section id="home-info">
+		<div id="info_img"></div>
+		<div id="info-content" class="bg-dark">
+			<h1><span class="text-primary">The History</span> Of Our Hotel</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laboriosam doloribus nisi. Vero, tempora nostrum! Iste mollitia facere saepe optio, corporis maxime reiciendis ratione quaerat magnam fuga, sapiente totam adipisci aut fugiat perferendis. Et, fugiat? Deserunt asperiores nulla sapiente, voluptatem nihil optio corporis temporibus voluptates suscipit error possimus dolor distinctio!</p>
+			<a class="btn btn-light">Read More</a>
+		</div>
+	</section>
+	#home-info{
+	height: 400px;
+	}
+	#info_img{
+	  background-image: url('../images/hotels/photo-1.jpg');
+	  float: left;
+	  width: 50%;
+	  height: 100%;
+	}
+}

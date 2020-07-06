@@ -53,8 +53,19 @@ A : There are three types of CSS as mentioned below:
 
 Q : Explain the concept of Tweening.
 
-A : Tweening is the process in which we create intermediate frames between two images to get the appearance of the first
-	 image which develops into the second image.
+	Tweening is the process in which we create intermediate frames between two images to get the appearance of the first image which develops into the second image.
+	
+Q : What are position property in css.
+
+	static : Not affected by top,bottom,left,right properties/values. By default property of div.
+	
+	Relative : Top, Bottom, Right, Left values element to be moved from its normal position.
+	
+	Absolute : Position relative to its parent element that is positioned "relative".
+	
+	Fixed : Positioned relative to viewport.
+	
+	Sticky : Positioned based on scroll position.	
 	
 Q : What are gradients in CSS?
 
@@ -66,7 +77,7 @@ A : It is a property of CSS which allows you to display a smooth transformation 
 	
 Q : What is CSS flexbox?
 
-A : It allows you to design a flexible responsive layout structure without using any float or positioning property of CSS. 
+	It allows you to design a flexible responsive layout structure without using any float or positioning property of CSS. 
 	To use CSS flexbox you need to define a flex container initially.
 	<!DOCTYPE html>
 	<html>

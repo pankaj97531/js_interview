@@ -173,4 +173,18 @@ Q : what are responsibilities of store in redux state
 	
 Q : What are default props in react
 
-	https://blog.bitsrc.io/understanding-react-default-props-5c50401ed37d	
+	https://blog.bitsrc.io/understanding-react-default-props-5c50401ed37d
+
+Q : What is lazy in React.
+
+Q : How error boundaries handled in React v15?
+
+	React v15 provided very basic support for error boundaries using unstable_handleError method. It has been renamed to componentDidCatch in React v16.
+
+Q : What is cors.
+
+	CORS : Cross-Origin-Resource-Sharing 
+	This is related to security concept. If client and server has same source then operation is succeed.
+	If client and server have different resource then request from client to server will fail.Because as a default browser is saying it does not make sense to you to get sometning from server.It is not the server you are coming from. 
+	
+		
