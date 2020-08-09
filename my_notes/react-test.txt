@@ -1,0 +1,12 @@
+Q : What does enzyme do?
+
+	create vitual DOM for testing.
+	
+	Allows a testing without browser.
+	
+	Enzyme has better toolkit to work with virtual DOM.
+	
+	Enzyme has shallow rendering.
+	
+	
+	

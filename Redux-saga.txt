@@ -1,0 +1,92 @@
+import { all } from 'redux-saga/effects'
+import WatcherSaga from './Saga'
+import WatcherSaga2 from './Saga2'
+export default function* rootSaga() {
+  yield all([
+    WatcherSaga(),
+    WatcherSaga2(),
+  ])
+}
+
+generator function :It is a function which can be exited and reentered with the same context as when
+					 you exited. Wherever you see yield, the execution flow will exit this function, run what comes after the yield, and then return to the next line in the generator.
+
+All function : With all(), they will both start at the same time. 
+
+take(pattern) :	
+				 Creates an Effect description that instructs the middleware to wait for a specified action on the Store. The Generator is suspended until an action that matches pattern is dispatched.
+				
+				The result of yield take(pattern) is an action object being dispatched.
+				
+TakeLatest : 
+			TakeLatest() does what it sounds like; if you dispatch the action before the previous API call finishes, it will stop that call and return only the latest one.
+			
+takeEvery : 
+			TakeEvery() allows multiple instances of these sagas to run at the same time.
+			
+Select : 	Select() gets data from the redux store.	
+
+yield put({ type: 'ACTION_SUCCESS', data })
+
+		Put() dispatches an action. Because it is expecting an action for an argument, you can treat put() like an action creator; so if you want, you can delete your action creators for actions dispatched from within put().
+		
+call(fn, ...args) 
+					Creates an Effect description that instructs the middleware to call the function fn with args as arguments.
+					
+					fn: Function - A Generator function, or normal function which either returns a Promise as result, or any other value.
+					
+					args: Array<any> - An array of values to be passed as arguments to fn
+					
+					Notes
+					
+					fn can be either a normal or a Generator function.
+					
+					The middleware invokes the function and examines its result.
+					
+					If the result is an Iterator object, the middleware will run that Generator function, just like it did with the startup Generators (passed to the middleware on startup). The parent Generator will be suspended until the child Generator terminates normally, in which case the parent Generator is resumed with the value returned by the child Generator. Or until the child aborts with some error, in which case an error will be thrown inside the parent Generator.
+					
+					If fn is a normal function and returns a Promise, the middleware will suspend the Generator until the Promise is settled. After the promise is resolved the Generator is resumed with the resolved value, or if the Promise is rejected an error is thrown inside the Generator.
+					
+					If the result is not an Iterator object nor a Promise, the middleware will immediately return that value back to the saga, so that it can resume its execution synchronously.
+
+fork(fn, ...args) 
+					Creates an Effect description that instructs the middleware to perform a non-blocking call on fn
+					
+					Arguments
+					
+					fn: Function - A Generator function, or normal function which returns a Promise as result
+					
+					args: Array<any> - An array of values to be passed as arguments to fn
+					
+					returns a Task object.
+					
+					Notes
+					
+					fork, like call, can be used to invoke both normal and Generator functions. But, the calls are non-blocking, the middleware doesn't suspend the Generator while waiting for the result of fn. Instead as soon as fn is invoked, the Generator resumes immediately.
+					
+					fork, alongside race, is a central Effect for managing concurrency between Sagas.
+					
+					The result of yield fork(fn ...args) is a Task object. An object with some useful methods and properties.
+					
+					All forked tasks are attached to their parents. When the parent terminates the execution of its own body of instructions, it will wait for all forked tasks to terminate before returning.
+					
+spawn(fn, ...args)	
+					Same as fork(fn, ...args) but creates a detached task. A detached task remains independent from its parent and acts like a top-level task. The parent will not wait for detached tasks to terminate before returning and all events which may affect the parent or the detached task are completely independents (error, cancellation).
+					
+					
+join([...tasks])	
+					Creates an Effect description that instructs the middleware to wait for the results of previously forked tasks.
+					
+					tasks: Array<Task> - A Task is the object returned by a previous fork
+					
+					Notes
+					
+					It wraps the array of tasks in join effects, roughly becoming the equivalent of yield tasks.map(t => join(t)).
+					
+cancel(task)					
+				Creates an Effect description that instructs the middleware to cancel a previously forked task.
+				
+				task: Task - A Task object returned by a previous fork
+				
+				Notes
+				

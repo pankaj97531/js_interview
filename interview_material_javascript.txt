@@ -1,3 +1,31 @@
+Q : What is difference between Object.create and new operator.
+
+	{	https://medium.com/@jonathanvox01/understanding-the-difference-between-object-create-and-the-new-operator-b2a2f4749358	https://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction#:~:text=The%20object%20used%20in%20Object,create%20closures%20with%20the%20Object.
+	}
+	
+Q : What is Object.create?
+
+	Object.create is static method on the object prototype that create a new object with the prototype set to certain object.
+	
+Q : What is property addition proof in javascript?	
+	
+Q : What is webkitTemporaryStorage;
+
+Q : What is webkitPersistentStorage;
+
+Q : What are the rules for JavaScript's automatic semicolon insertion (ASI)?
+
+Q : Is multiple inheritance is possible javascript?
+
+	JavaScript does not support multiple inheritance.
+	
+	Inheritance of property values occurs at run time by JavaScript searching the prototype chain of an object to find a value. Because an object has a single associated prototype, JavaScript cannot dynamically inherit from more than one prototype chain.
+	
+	Reference Link : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#:~:text=JavaScript%20does%20not%20support%20multiple%20inheritance.&text=Because%20an%20object%20has%20a,other%20constructor%20function%20within%20it.
+	
+	
+	
+
 1.ajax with different state
 
 2.What is cross site ajax

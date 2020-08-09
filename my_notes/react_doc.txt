@@ -1,25 +1,17 @@
-Q : What is vitual DOM.
-
-	virtual dom sits on top of the browser html dom.Virtual dom listen for changes.If there is change then the HTML DOM underneath is updated with the new UI.By comparing the changes with virtual dom the real dom is able to update the UI.
-	The react virtual dom is mounting the real browser dom.
-
-	componentdidmount : this tell us virtual dom of successfully mounted the real dom.
-		
 Q : What is JSX compiler.
 
 	Babel compiles JSX down to React.createElement() calls.
 	These two examples are identical:
 	const element = (
 	  <h1 className="greeting">
-		Hello, world!
+		<p>Hello, world!</p>
 	  </h1>
 	);
 	
-	const element = React.createElement(
-	  'h1',
-	  {className: 'greeting'},
-	  'Hello, world!'
-	);
+	const element = React.createElement("h1", {
+	  className: "greeting"
+	}, React.createElement("p", null, "Hello, world!"));
+
 	React.createElement() performs a few checks to help you write bug-free code but essentially it creates an object like this:
 	
 	Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.
@@ -44,6 +36,8 @@ Q : What is JSX compiler.
 	For example refer : https://reactjs.org/docs/rendering-elements.html
 	
 Q : What is compiler in react.
+
+	Babel (read about more)
 
 Q : What is best practices you should use to develop react project.
 
@@ -75,6 +69,10 @@ Q : What is best way to develop react project so that any other developer would 
 
 Q : What is Design Principles of Reactjs
 
+	{
+		https://reactjs.org/docs/design-principles.html
+	}
+
 Q : How to write highly readable React code - 10 coding style tips : 
 
 	Tip #1: Always use prop-types to define all the props in your components
@@ -94,6 +92,9 @@ Q : can we use context for update state in consumer in react.
 	}
 		
 Q : What in contextType?
+
+	
+	
 
 Q : What are advantages of using React Hooks?
 
@@ -174,6 +175,10 @@ Q : what are responsibilities of store in redux state
 Q : What are default props in react
 
 	https://blog.bitsrc.io/understanding-react-default-props-5c50401ed37d
+	
+	ComponentName.defaultProp = {
+		propname : "propvalue"
+	}
 
 Q : What is lazy in React.
 

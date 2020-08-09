@@ -1,0 +1,25 @@
+Q : What is middleware ?
+
+	Middleware is some code you can put between the receiving a request, and generating a response. For example, Express or Koa middleware may add CORS headers, logging, compression, and more. The best feature of middleware is that it's composable in a chain.
+	
+	Redux middleware solves different problems than Express or Koa middleware, but in a conceptually similar way. It provides a third-party extension point between dispatching an action, and the moment it reaches the reducer. People use Redux middleware for logging, crash reporting, talking to an asynchronous API, routing, and more.
+	
+Q : Difference between thunk and redux-saga.
+
+	A thunk is a function that acts as a wrapper in which it wraps an expression to delay its evaluation. Thunk allows to write an action creators that return a function instead of the typical action object.
+	
+	Where as redux-saga is a library that mainly focuses on easy handling of application side effects and more efficient for execution.
+	
+	Thunk allows Promises to deal with them, Saga uses Generators. Thunk is simple to use and Promises are familiar to many developers, Saga/Generators are more powerful but you will need to learn them.
+	
+	https://decembersoft.com/posts/redux-thunk-vs-redux-saga/
+	
+Q : What is update blocker in redux and react-router
+
+	{
+	https://stackoverflow.com/questions/54098143/bypassing-update-blocker-in-non-route-component-with-react-router-and-react-hook
+	https://spectrum.chat/react/general/react-router-and-redux-dealing-with-update-blocking~5ced9767-9e5e-413a-a00c-3498c3fed6fa
+	
+	}	
+
+hackerrank reactjs test

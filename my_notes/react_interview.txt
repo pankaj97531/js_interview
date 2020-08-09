@@ -15,8 +15,8 @@ A : https://www.youtube.com/watch?v=mLMfx8BEt8g
 	If we compare it with javascript, rendering operation in javascript is expensive.
 	Browser has go through a sequence of step each time it has to render the new DOM structure.
 	
-	In react we use virtual DOM.
-	We create template in react using JSX.React compiles this template but instead rendering into DOM directly it create a copy of this DOM structure.
+	React uses virtual DOM.
+	React create template using JSX.React compiles this template but instead rendering into DOM directly it create a copy of this DOM structure.
 	This new DOM structure copy of actual DOM is called a virtual DOM.
 	As we have created virtual dom for first time renders the same as it is into the browser as real DOM. And browser going to dispaly the output.
 	Now we have new data , react will create a new copy of vitual DOM combine with new data and it compare the new copy of virtual DOM with previous copy of virtual DOM.
@@ -39,7 +39,44 @@ Q : What is Redux ?
 	2. State is read only.
 
 	3. Changes are made with pure function.
+	
+	Actions are payloads of information that send data from your application to your store. They are the only source of information for the store. You send them to the store using store.dispatch().
+	
+	Dispatches an action. This is the only way to trigger a state change.
+	
+	The store's reducing function will be called with the current getState() result and the given action synchronously. Its return value will be considered the next state. It will be returned from getState() from now on, and the change listeners will immediately be notified.
+	
+	subscribe(listener) : Adds a change listener. It will be called any time an action is dispatched, and some part of the state tree may potentially have changed. You may then call getState() to read the current state tree inside the callback.
+	
+	function select(state) {
+	  return state.some.deep.property
+	}
 
+	let currentValue
+	function handleChange() {
+	  let previousValue = currentValue
+	  currentValue = select(store.getState())
+
+	  if (previousValue !== currentValue) {
+		console.log(
+		  'Some deep nested property changed from',
+		  previousValue,
+		  'to',
+		  currentValue
+		)
+	  }
+	}
+
+	const unsubscribe = store.subscribe(handleChange)
+	unsubscribe()
+	
+Q : Short notes on Store.
+
+	getState()
+	dispatch(action)
+	subscribe(listener)
+	replaceReducer(nextReducer)
+		
 Q : What is memo in react
 
 	React.memo is a higher order component. It’s similar to React.PureComponent but for function components instead of classes.
@@ -250,10 +287,6 @@ A : {
 	https://reactkungfu.com/2015/10/the-difference-between-virtual-dom-and-dom/
 	https://stackoverflow.com/questions/34114350/react-vs-reactdom
 	}
-
-Q : controlled input and uncontrolled input in react
-
-	If we controlled our input with state and onchange method then that is controlled input. If we access input with ref then that input is called uncontrolled input.  
 
 Q : Memory management in javascript.
 
