@@ -1,3 +1,8 @@
+Q : What is SyntheticEvent in react(very important question).
+	{
+		https://reactjs.org/docs/events.html
+	}
+Q : What is react fiber in react 16.7 and what is concurrent mode in react.
 Q : What is JSX compiler.
 
 	Babel compiles JSX down to React.createElement() calls.

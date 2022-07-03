@@ -8,6 +8,23 @@ export default function* rootSaga() {
   ])
 }
 
+Blocking call : take , call , race , takeEvery
+
+Non-Blocking Call : put , fork , cancel , join 
+
+Advantage of redux-thunk : 
+
+	The business logic is not tightly coupled to the UI components so it can be reused by components.
+	
+	It is easy to learn unlike redux-saga(which we will be covering later in this article) because you don’t need to learn new JavaScript concepts to use it.
+	
+Disadvantages of redux-thunk :
+
+	It can become difficult to read and understand when you start dealing with complex async login in complex applications.
+	
+	It doesn’t provide any way to handle advanced async operations like cancellation and debouncing.
+	
+	
 generator function :It is a function which can be exited and reentered with the same context as when
 					 you exited. Wherever you see yield, the execution flow will exit this function, run what comes after the yield, and then return to the next line in the generator.
 

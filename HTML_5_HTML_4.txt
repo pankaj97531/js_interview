@@ -7,6 +7,9 @@
 	https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills
 	keyword : shim and polyfill bootstrap , shim in html5
 }
+
+Q : How website load in browser ? How URL hit the server how response come ? How html generate at serverb and browser ? How rendering happen in browser.
+  
 Q : General Differences between HTML5 and HTML4
 
 A : Following are some of the major characteristics that distinguish HTML5 from HTML4.

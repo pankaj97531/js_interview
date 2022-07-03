@@ -132,11 +132,20 @@ Q : What is data-attribute?
 	data-name="Pankaj" data-linkname="Mylink"
 	
 Q : How browser work ?
+
+stdent name : tali garsiel
+
+https://www.dailymotion.com/video/x3qs3lz
+
+https://taligarsiel.com/
+
 https://www.youtube.com/watch?v=OE8EvaOPkZ4
+
+https://www.youtube.com/watch?v=SmE4OwHztCc
 
 http://taligarsiel.com/Projects/howbrowserswork1.htm
 
-http://taligarsiel.com/ClientSidePerformance.html	
+http://taligarsiel.com/ClientSidePerformance.html
 
 https://css-tricks.com/browser-painting-and-considerations-for-web-performance/
 

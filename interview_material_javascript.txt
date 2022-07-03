@@ -1,7 +1,41 @@
+Q : function x1(){
+	console.log(name)
+}
+function x2(){
+	x1()
+}
+x2();
+
+Q : function x1(){
+	console.log(name)
+}
+function x2(){
+	returns x1
+}
+const callx2 = x2();
+
+console.log(callx2());
+
 Q : What is difference between Object.create and new operator.
 
 	{	https://medium.com/@jonathanvox01/understanding-the-difference-between-object-create-and-the-new-operator-b2a2f4749358	https://stackoverflow.com/questions/4166616/understanding-the-difference-between-object-create-and-new-somefunction#:~:text=The%20object%20used%20in%20Object,create%20closures%20with%20the%20Object.
 	}
+	
+Q : What is weak map.
+
+Q : Service worker	
+
+Q : Check if images loaded or not.
+
+Q : Internatiolization and localization
+
+Q : take two input fields and submit button and create a dynamic table based on input.
+
+Q : Create a navigation bar.
+
+Q : What is Promise.Race , Promise.all , Promise.any, What is defference , What will happen one promise will reject in app,race , any.
+
+Q : What is pure function and how filter and map are pure function.  
 	
 Q : What is Object.create?
 
